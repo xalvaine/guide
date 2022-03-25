@@ -1,0 +1,46 @@
+.header {
+  padding: 80px 130px 100px;
+  background: url('assets/header.svg');
+  background-size: cover;
+}
+
+.content {
+  width: 1660px;
+  margin: auto;
+}
+
+.headerTop {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logoAndBurger {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 360px;
+  margin-right: 200px;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #00323d;
+}
+
+.links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 148px;
+  align-content: space-between;
+}
+
+.link {
+  margin-bottom: 48px;
+}
