@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 160px;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 138px;
+  line-height: 100%;
+  color: #00323d;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.content {
+  width: 1660px;
+  margin: auto;
+}
+
+.image {
+  flex-shrink: 0;
+}

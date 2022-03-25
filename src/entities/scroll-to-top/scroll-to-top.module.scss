@@ -1,0 +1,16 @@
+.button {
+  position: fixed;
+  right: 75px;
+  bottom: 120px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity .3s;
+  opacity: 1;
+}
+
+.buttonHidden {
+  composes: button;
+  opacity: 0;
+  pointer-events: none;
+}
