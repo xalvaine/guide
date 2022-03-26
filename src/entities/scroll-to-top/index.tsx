@@ -6,7 +6,6 @@ export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   const toggleVisibility = () => {
-    console.log(`asdasd`)
     setIsVisible(window.scrollY > 600)
   }
 

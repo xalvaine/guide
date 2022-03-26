@@ -7,6 +7,7 @@ import Burger from './assets/burger.svg'
 import { Link } from '../link'
 
 import styles from './header.module.scss'
+import { Dropdown } from 'entities/header/ui/dropdown'
 
 interface Props {
   title: string
@@ -38,13 +39,19 @@ export const Header = ({ title }: Props) => {
               <Link className={styles.link} href={Routes.Library}>
                 Библиотека
               </Link>
-              <Link className={styles.link} href={Routes.Identity}>
-                Айдентика
-              </Link>
+              <Dropdown>
+                <Link
+                  preventClick
+                  className={styles.link}
+                  href={Routes.Identity}
+                >
+                  Айдентика
+                </Link>
+              </Dropdown>
               <Link className={styles.link} href={Routes.Trainer}>
                 Тренажер
               </Link>
-              <Link className={styles.link} href={Routes.Identity}>
+              <Link className={styles.link} href={Routes.Contacts}>
                 Контакты
               </Link>
             </div>
