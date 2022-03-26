@@ -59,7 +59,6 @@ const About: NextPage = () => {
           коммуникациии.
         </Paragraph>
       </Section>
-      <ScrollToTop />
     </>
   )
 }
