@@ -39,15 +39,7 @@ export const Header = ({ title }: Props) => {
               <Link className={styles.link} href={Routes.Library}>
                 Библиотека
               </Link>
-              <Dropdown>
-                <Link
-                  preventClick
-                  className={styles.link}
-                  href={Routes.Identity}
-                >
-                  Айдентика
-                </Link>
-              </Dropdown>
+              <Dropdown />
               <Link className={styles.link} href={Routes.Trainer}>
                 Тренажер
               </Link>
