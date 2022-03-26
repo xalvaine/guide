@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import styles from 'pages/identity/logo/ui/title/title.module.scss'
+import styles from './title.module.scss'
 
 interface Props {
   children: ReactNode
