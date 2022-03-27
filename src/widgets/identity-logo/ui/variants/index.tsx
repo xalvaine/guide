@@ -2,6 +2,7 @@ import { CSSProperties } from 'react'
 import Rus from './assets/rus.svg'
 import Eng from './assets/eng.svg'
 import styles from './variants.module.scss'
+import { Download } from 'shared/ui/download'
 
 interface Props {
   style?: CSSProperties
@@ -12,7 +13,7 @@ export const Variants = ({ style }: Props) => {
     <div style={style} className={styles.wrapper}>
       <Rus style={{ marginBottom: 80 }} />
       <Eng />
-      <button className={styles.button}>Скачать</button>
+      <Download className={styles.button} />
     </div>
   )
 }
