@@ -1,0 +1,66 @@
+.wrapper {
+}
+
+.hello {
+  font-size: 234px;
+  line-height: 274px;
+  color: #77e2c3;
+  margin: 80px 0;
+}
+
+.content {
+  display: flex;
+}
+
+.svg {
+  flex-shrink: 0;
+  margin-right: 125px;
+  margin-top: -170px;
+}
+
+.examples {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.exTitle {
+  color: #008c95;
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.text {
+  width: 250px;
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+
+.light {
+  composes: text;
+  font-weight: 300;
+}
+
+.normal {
+  composes: text;
+}
+
+.bold {
+  composes: text;
+  font-weight: 700;
+}
+
+.comment {
+  font-size: 17px;
+  line-height: 20px;
+  width: 293px;
+}
+
+.warn {
+  margin-top: 22px;
+  margin-bottom: 18px;
+}
+
+.download {
+  right: 0;
+  bottom: 170px;
+}

@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.variant {
+  flex-basis: 750px;
+
+  &:first-of-type {
+    flex-basis: 775px;
+  }
+}
+
+.text {
+  font-size: 27px;
+  line-height: 32px;
+  margin-bottom: 85px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #00313c;
+  margin-bottom: 45px;
+}
