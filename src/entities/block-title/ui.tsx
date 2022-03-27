@@ -1,8 +1,8 @@
 import styles from './block-title.module.scss'
-import { CSSProperties } from 'react'
+import {CSSProperties, ReactNode} from 'react'
 
 interface Props {
-  title: string
+  title: ReactNode
   style?: CSSProperties
 }
 
