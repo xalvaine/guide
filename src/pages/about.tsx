@@ -46,7 +46,7 @@ const About: NextPage = () => {
           время и силы, а результат работы сделает безупречным.
         </Paragraph>
       </Section>
-      <Section title='Слово ген-директора'>
+      <Section title={<>Слово ген-<br/>директора</>}>
         <Paragraph style={{ paddingTop: 90, paddingBottom: 280 }}>
           <strong>Наш фирменный стиль</strong> — графическое воплощение сути
           бренда, помогающее донести до целевой аудитории, кто мы и чем
