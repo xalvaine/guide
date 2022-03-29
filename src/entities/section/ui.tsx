@@ -4,7 +4,7 @@ import styles from 'entities/section/section.module.scss'
 import {CSSProperties, ReactNode} from 'react'
 
 interface Props {
-  title: string
+  title: ReactNode
   children: ReactNode
   style?: CSSProperties
 }
@@ -14,7 +14,7 @@ export const Section = ({ title, children, style }: Props) => {
     <>
       <div className={styles.wrapper} style={style}>
         <Arrows className={styles.image} />
-        <h2 className={styles.title}>{title}</h2>
+        <div><h2 className={styles.title}>{title}</h2></div>
         <CircleLines className={styles.image} />
       </div>
       <div className={styles.content}>{children}</div>
