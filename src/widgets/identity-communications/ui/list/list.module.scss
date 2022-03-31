@@ -1,13 +1,16 @@
 /* autoprefixer grid: autoplace */
 .wrapper {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  margin: 0 -55px -80px 0;
+  margin-right: -55px;
 
 }
 
 .itemRow {
   display: flex;
-  margin-bottom: 55px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 55px;
+  }
 }
 
 .item {
