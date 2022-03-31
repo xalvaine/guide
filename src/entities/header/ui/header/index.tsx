@@ -28,7 +28,7 @@ export const Header = ({ title }: Props) => {
             </div>
             <div className={styles.links}>
               <Link className={styles.link} href={Routes.About}>
-                О документе
+                Новый бренд сибура
               </Link>
               <Link className={styles.link} href={Routes.Communications}>
                 Коммуникации
