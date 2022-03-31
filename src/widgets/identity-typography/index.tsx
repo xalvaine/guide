@@ -9,6 +9,8 @@ import Placement from './assets/placement.svg'
 import Ex1 from './assets/ex1.svg'
 import Ex2 from './assets/ex2.svg'
 import Ex3 from './assets/ex3.svg'
+import {PageToggle} from "shared/ui/page-toggle";
+import {Routes} from "shared/config";
 
 export const IdentityTypography = () => {
   return (
@@ -100,7 +102,6 @@ export const IdentityTypography = () => {
             display: `flex`,
             flexDirection: `column`,
             marginLeft: -15,
-            marginBottom: 250,
           }}
         >
           <Ex1 />
@@ -108,6 +109,12 @@ export const IdentityTypography = () => {
           <Ex3 style={{ marginTop: 60 }} />
         </div>
       </Section>
+      <PageToggle
+        prevLink={Routes.IdentityGrid}
+        prevTitle='Модульная сетка'
+        nextLink={Routes.IdentityPhotoStyle}
+        nextTitle='Фотостиль'
+      />
     </>
   )
 }

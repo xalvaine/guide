@@ -8,6 +8,8 @@ import Palette2 from './assets/palette2.svg'
 import Solution from './assets/solution.svg'
 import br from './assets/br.png'
 import wr from './assets/wr.png'
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
 
 export const IdentityPalette = () => {
   return (
@@ -56,10 +58,16 @@ export const IdentityPalette = () => {
         />
         <img
           src={wr.src}
-          style={{ marginLeft: -35, marginBottom: 450 }}
+          style={{ marginLeft: -35 }}
           alt=''
         />
       </Section>
+      <PageToggle
+        prevLink={Routes.IdentityLogo}
+        prevTitle='Логотип'
+        nextLink={Routes.IdentityPatterns}
+        nextTitle='Паттерны'
+      />
     </>
   )
 }

@@ -5,6 +5,8 @@ import Image from './assets/image.svg'
 import { Sections } from 'widgets/identity-photo-style/ui/sections'
 import { BlockTitle } from 'entities/block-title/ui'
 import { WrongUsages } from 'widgets/identity-photo-style/ui/wrong-usages'
+import {PageToggle} from "shared/ui/page-toggle";
+import {Routes} from "shared/config";
 
 export const IdentityPhotoStyle = () => {
   return (
@@ -26,6 +28,12 @@ export const IdentityPhotoStyle = () => {
         />
         <WrongUsages />
       </Section>
+      <PageToggle
+        prevLink={Routes.IdentityTypography}
+        prevTitle='Типографика'
+        nextLink={Routes.IdentityIcons}
+        nextTitle='Иконки'
+      />
     </>
   )
 }

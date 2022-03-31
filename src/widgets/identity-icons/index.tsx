@@ -2,6 +2,8 @@ import { Header } from 'entities/header/ui'
 import { Section } from 'entities/section/ui'
 import { Variants } from 'widgets/identity-icons/ui/variants'
 import { Paragraph } from 'shared/ui/paragraph'
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
 
 export const IdentityIcons = () => {
   return (
@@ -16,6 +18,12 @@ export const IdentityIcons = () => {
         </Paragraph>
       </Section>
       <Variants />
+      <PageToggle
+        prevLink={Routes.IdentityPhotoStyle}
+        prevTitle='Фотостиль'
+        nextLink={Routes.Communications}
+        nextTitle='Коммуникации'
+      />
     </>
   )
 }

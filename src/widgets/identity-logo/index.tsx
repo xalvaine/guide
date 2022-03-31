@@ -15,6 +15,8 @@ import WrongUsages from './assets/wrong-usages.svg'
 import Slogan from './assets/slogan.svg'
 import Placement from './assets/placement.svg'
 import styles from './logo.module.scss'
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
 
 const Logo: NextPage = () => {
   return (
@@ -172,10 +174,14 @@ const Logo: NextPage = () => {
           изображения с несложной композицией, которые не будут мешать  его
           восприятию.
         </Paragraph>
-        <Placement
-          style={{ marginLeft: -10, marginTop: 30, marginBottom: 250 }}
-        />
+        <Placement style={{ marginLeft: -10, marginTop: 30 }} />
       </Section>
+      <PageToggle
+        prevLink={Routes.About}
+        prevTitle='Новый бренд СИБУРа'
+        nextLink={Routes.IdentityPalette}
+        nextTitle='Цветовая палитра'
+      />
     </>
   )
 }

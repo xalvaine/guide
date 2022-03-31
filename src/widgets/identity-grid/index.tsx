@@ -16,6 +16,8 @@ import Usage4 from './assets/usage4.svg'
 import Example1 from './assets/example1.svg'
 import Example2 from './assets/example2.svg'
 import { BlockTitle } from 'entities/block-title/ui'
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
 
 export const IdentityGrid = () => {
   return (
@@ -206,6 +208,12 @@ export const IdentityGrid = () => {
         <BlockTitle title='Примеры  использования' style={{ marginTop: 120 }} />
         <Example1 style={{ marginTop: 40 }} />
         <Example2 style={{ marginTop: 80, marginBottom: 250 }} />
+        <PageToggle
+          prevLink={Routes.IdentityPatterns}
+          prevTitle='Паттерны'
+          nextLink={Routes.IdentityTypography}
+          nextTitle='Типографика'
+        />
       </Section>
     </>
   )

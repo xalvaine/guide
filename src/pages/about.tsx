@@ -5,6 +5,8 @@ import { BlockTitle } from 'entities/block-title/ui'
 import { Paragraph } from 'shared/ui/paragraph'
 import ph from './assets/fc72898c 1.png'
 import { ScrollToTop } from 'entities/scroll-to-top'
+import {PageToggle} from "shared/ui/page-toggle";
+import {Routes} from "shared/config";
 
 const About: NextPage = () => {
   return (
@@ -103,6 +105,10 @@ const About: NextPage = () => {
           <img src={ph.src} style={{ marginLeft: 80 }} />
         </div>
       </Section>
+      <PageToggle
+        nextLink={Routes.Platform}
+        nextTitle='Платформа бренда'
+      />
       <ScrollToTop />
     </>
   )

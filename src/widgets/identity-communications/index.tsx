@@ -92,10 +92,10 @@ const list: ComponentProps<typeof Sec>[] = [
 export const IdentityCommunications: NextPage = () => {
   return (
     <>
-      <Header title='Айдентика бренда' />
+      <Header title='Коммуникации' />
       <div className={styles.wrapper}>
         <BlockTitle title='Четыре принципа' style={{ marginTop: 140 }} />
-        <List items={items1} style={{ gridTemplateRows: `auto` }} />
+        <List items={items1} singleRow />
         {list.map((item, index) => (
           <Sec key={index} {...item} />
         ))}

@@ -5,6 +5,8 @@ import { Download } from 'shared/ui/download'
 import { Paragraph } from 'shared/ui/paragraph'
 import Patterns from './assets/patterns.svg'
 import {Coords} from "widgets/identity-patterns/ui/coords";
+import {PageToggle} from "shared/ui/page-toggle";
+import {Routes} from "shared/config";
 
 export const IdentityPatterns = () => {
   return (
@@ -30,6 +32,12 @@ export const IdentityPatterns = () => {
         <Patterns style={{ marginTop: 60 }} />
         <Coords />
       </Section>
+      <PageToggle
+        prevLink={Routes.IdentityPalette}
+        prevTitle='Цветовая палитра'
+        nextLink={Routes.IdentityGrid}
+        nextTitle='Модульная сетка'
+      />
     </>
   )
 }
