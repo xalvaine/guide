@@ -5,12 +5,13 @@ import classNames from 'classnames'
 interface Props {
   style?: CSSProperties
   className?: string
+  text?: string
 }
 
-export const Download = ({ style, className }: Props) => {
+export const Download = ({ style, className, text }: Props) => {
   return (
     <button style={style} className={classNames(styles.button, className)}>
-      Скачать
+      {text || `Скачать`}
     </button>
   )
 }

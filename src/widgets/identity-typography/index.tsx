@@ -2,15 +2,14 @@ import { Header } from 'entities/header/ui'
 import { Section } from 'entities/section/ui'
 import { Paragraph } from 'shared/ui/paragraph'
 import { Roboto } from 'widgets/identity-typography/ui/roboto'
-import { Download } from 'shared/ui/download'
 import { BlockTitle } from 'entities/block-title/ui'
 import { Variants } from 'widgets/identity-typography/ui/variants'
 import Placement from './assets/placement.svg'
 import Ex1 from './assets/ex1.svg'
 import Ex2 from './assets/ex2.svg'
 import Ex3 from './assets/ex3.svg'
-import {PageToggle} from "shared/ui/page-toggle";
-import {Routes} from "shared/config";
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
 
 export const IdentityTypography = () => {
   return (
