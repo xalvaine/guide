@@ -1,0 +1,47 @@
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.i1 {
+  background: url('./assets/whoweare.svg') no-repeat 0 -1px;
+  padding-bottom: calc(96 / 192 * 100%);
+  background-size: cover;
+}
+
+.i2 {
+  margin-top: 120px;
+  background: url('./assets/principles.svg') no-repeat 0 -1px;
+  padding-bottom: calc(1037 / 1920 * 100%);
+  background-size: cover;
+}
+
+.i3 {
+  margin-top: -30px;
+  background: url('./assets/purpose.svg') no-repeat 0 -1px;
+  padding-bottom: calc(1142 / 1920 * 100%);
+  background-size: cover;
+}
+
+.i4 {
+  margin-top: 24px;
+  background: url('./assets/prods2.svg') no-repeat 0 -1px;
+  padding-bottom: calc(545 / 1920 * 100%);
+  background-size: cover;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 74px;
+}
