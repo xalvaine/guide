@@ -158,7 +158,7 @@
   border-radius: 40px;
   width: 462px;
   height: 352px;
-  background-image: url("./assets/i11_1.svg");
+  background-image: url('./assets/i11_1.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -167,7 +167,140 @@
   border-radius: 40px;
   width: 462px;
   height: 352px;
-  background-image: url("./assets/i11_2.svg");
+  background-image: url('./assets/i11_2.svg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.imageContent2 {
+  composes: imageContent;
+  padding: 110px 0;
+}
+.imageContent3 {
+  composes: imageContent;
+  height: 354px;
+}
+
+.i20_1 {
+  border-radius: 40px;
+  width: 462px;
+  height: 352px;
+  background-image: url('./assets/i20_1.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.i20_2 {
+  border-radius: 40px;
+  width: 462px;
+  height: 352px;
+  background-image: url('./assets/i20_2.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imgDesc {
+  width: 442px;
+}
+
+.results {
+  width: 835px;
+  padding: 70px 162px 80px;
+  border: 1.5px solid #999999;
+  box-shadow: 0px 0px 50.9775px rgba(153, 153, 153, 0.2);
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-size: 160% auto;
+  background-position: 45% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resTitle {
+  font-weight: 400;
+  font-size: 45.356px;
+  line-height: 55px;
+  /* identical to box height, or 121% */
+
+
+  /* SIBUR Body Text */
+
+  color: #00323D;
+}
+
+.resScore {
+  margin-top: -15px;
+  font-weight: 700;
+  font-size: 79.8621px;
+  line-height: 118px;
+  /* identical to box height, or 148% */
+
+
+  /* SIBUR Body Text */
+
+  color: #00323D;
+
+}
+
+.resSubtitle {
+  margin-top: -10px;
+  font-weight: 400;
+  font-size: 21.5194px;
+  line-height: 26px;
+  /* or 121% */
+
+
+  /* SIBUR Body Text */
+
+  color: #00323D;
+
+}
+
+.resDesc {
+  padding-left: 45px;
+  margin-top: 50px;
+  font-size: 15.405px;
+  line-height: 18px;
+
+  /* SIBUR Body Text */
+
+  color: #00323D;
+}
+
+.success {
+  background-image: url('./assets/successF.svg');
+}
+
+.failure {
+  background-image: url('./assets/failure.svg');
+}
+
+.finishTitle {
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 100%;
+  /* identical to box height, or 96px */
+
+
+  /* SIBUR Body Text */
+
+  color: #00323D;
+  margin-bottom: 56px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 227px;
+}
+
+.download {
+  composes: nextQuestion;
+  background: #008C95;
+  /* SIBUR White */
+
+  border: 1.27546px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.25);
 }
