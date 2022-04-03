@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2.5px solid #77e2c3;
+
+  padding: 22px 24px;
+
+  width: 512px;
+  border-radius: 75px;
+}
+
+.text {
+  width: 54px;
+  font-weight: 400;
+  font-size: 19.9583px;
+  line-height: 23px;
+  text-align: right;
+  white-space: nowrap;
+  margin-left: 12px;
+
+  color: #000000;
+}
+
+.progress {
+  flex-grow: 1;
+  display: flex;
+  height: 13px;
+  background: rgba(162, 162, 162, 0.28);
+  box-shadow: 0px 0px 7.5px rgba(0, 0, 0, 0.08);
+  border-radius: 75px;
+}
+
+.progressLine {
+  height: 13px;
+  border-radius: 75px;
+  background: #77e2c3;
+}
