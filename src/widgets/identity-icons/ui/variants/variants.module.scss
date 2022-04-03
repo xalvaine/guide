@@ -3,7 +3,7 @@
 }
 
 .block1 {
-  margin: 160px auto 0;
+  margin: 93px auto 0;
   padding: 10px calc(50% - 840px) 57px;
 }
 
@@ -17,4 +17,28 @@
   background: #77e2c3;
   padding: 57px calc(50% - 840px);
   margin: 0 auto;
+}
+
+.short {
+  display: flex;
+}
+
+.titleShort {
+  padding: 93px calc(50% - 840px) 0;
+}
+
+.blocks {
+  margin-top: -36px;
+  display: flex;
+}
+
+.block1s {
+  flex-basis: 50%;
+  padding: 47px 0 55px calc(50% - 840px);
+}
+
+.block3s {
+  flex-basis: 50%;
+  background: #77e2c3;
+  padding: 47px 125px 55px;
 }

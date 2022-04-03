@@ -10,7 +10,7 @@ export const IdentityIcons = () => {
     <>
       <Header title='Айдентика бренда' />
       <Section title='Иконки'>
-        <Paragraph style={{ width: 1130, marginTop: 120 }}>
+        <Paragraph style={{ width: 1130, marginTop: 120, marginBottom: 160 }}>
           Для оформления материалов вы можете использовать обновленный набор
           иконок. <br />
           Все иконки сделаны в айдентике бренда СИБУРа, что делает их частью
