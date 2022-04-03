@@ -149,7 +149,7 @@ export const questions: Questions = [
     ],
   },
   {
-    question: `Какой слоган появился у СИБУРа и стал отражением перемен?`,
+    question: `Как теперь называется корпоративный шрифт СИБУРа?`,
     variants: [
       {
         content: <p className={styles.textContent}>Din Pro</p>,
@@ -231,7 +231,7 @@ export const questions: Questions = [
     ],
   },
   {
-    question: `Какой слоган появился у СИБУРа и стал отражением перемен?`,
+    question: `Какой шрифт можно использовать вместо Roboto, если есть технические проблемы?`,
     variants: [
       {
         content: <p className={styles.textContent}>Verdana</p>,
