@@ -40,8 +40,8 @@ export const Library = () => {
         style={{ marginTop: 160 }}
         title={
           <>
-            Шаблоны <br />
-            коммуникаций
+            Материалы <br />
+            о компании
           </>
         }
       >

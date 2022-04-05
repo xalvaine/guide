@@ -63,7 +63,7 @@ export const Platform = () => {
         </BigText>
         <img src={positioning.src} alt='' className={styles.image} />
       </Section>
-      <Section noPadding title='Принципы'>
+      <Section noPadding title='Суть бренда'>
         <div className={styles.i2} />
       </Section>
       <Section noPadding title='Цель'>
