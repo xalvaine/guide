@@ -20,18 +20,20 @@ export const Library = () => {
   return (
     <>
       <Header title='Библиотека' />
+      <Container >
       <Block
         style={{ marginTop: 120 }}
         title='Фотобанк СИБУРа'
         link='xxx'
         content={
           <img
-            style={{ marginLeft: -15, marginBottom: -25 }}
+            style={{ marginLeft: -15, marginBottom: -25, width: `73%` }}
             src={phbank.src}
             alt=''
           />
         }
       />
+      </Container>
       <Container style={{ marginTop: 160 }}>
         <BlockTitle title='Видео ролик о СИБУРе' />
         <Video />

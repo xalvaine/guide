@@ -27,7 +27,7 @@ export const Video = () => {
     <div className={styles.wrapper} onClick={handleToggle}>
       <video
         ref={videoRef}
-        src='/all_videos_05.mp4'
+        src='/static/all_videos_05.mp4'
         controls={false}
         className={styles.video}
       />
