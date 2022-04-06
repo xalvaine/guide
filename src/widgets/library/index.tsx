@@ -40,8 +40,7 @@ export const Library = () => {
         style={{ marginTop: 160 }}
         title={
           <>
-            Материалы <br />
-            о компании
+            Материалы <br />о компании
           </>
         }
       >
@@ -53,27 +52,31 @@ export const Library = () => {
         <Block
           style={{ marginTop: 120 }}
           title='Буклет о компании'
-          content={<Booklet style={{ marginLeft: -15, marginBottom: -25 }} />}
+          content={
+            <Booklet
+              style={{ marginLeft: -15, marginBottom: -25, width: `70%` }}
+            />
+          }
         />
         <Block
           style={{ marginTop: 120 }}
           title='Отраслевые каталоги'
-          content={<Catalogs style={{ marginLeft: -15, marginBottom: -25 }} />}
+          content={<Catalogs style={{ marginLeft: -15, marginBottom: -25, width: `70%` }} />}
         />
         <Block
           style={{ marginTop: 120 }}
           title='Презентациия о компании'
-          content={<Pres style={{ marginLeft: -15, marginBottom: -25 }} />}
+          content={<Pres style={{ marginLeft: -15, marginBottom: -25, width: `70%` }} />}
         />
         <Block
           style={{ marginTop: 120 }}
           title='Шаблон презентации'
-          content={<Templ style={{ marginLeft: -15, marginBottom: -25 }} />}
+          content={<Templ style={{ marginLeft: -15, marginBottom: -25, width: `70%` }} />}
         />
         <Block
           style={{ marginTop: 120 }}
           title='Конструктор презентации'
-          content={<Const style={{ marginLeft: -15, marginBottom: -25 }} />}
+          content={<Const style={{ marginLeft: -15, marginBottom: -25, width: `70%` }} />}
         />
         <Block
           link='xxx'
@@ -82,7 +85,7 @@ export const Library = () => {
           content={
             <img
               src={chan.src}
-              style={{ marginLeft: -15, marginBottom: -25 }}
+              style={{ marginLeft: -15, marginBottom: -25, width: `70%` }}
             />
           }
         />

@@ -13,12 +13,12 @@ interface Props {
 
 export const Block = ({ content, link, title, style }: Props) => {
   return (
-    <Container style={style}>
+    <div style={style}>
       <BlockTitle title={title} />
       <Relative>
         <div>{content}</div>
         <Download text={link && `Перейти`} style={{ right: 0, bottom: 0 }} />
       </Relative>
-    </Container>
+    </div>
   )
 }

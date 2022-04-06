@@ -304,3 +304,10 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.25);
 }
+
+@media (max-width: 1700px) {
+  .title {
+    padding: 0 20px;
+    width: auto;
+  }
+}

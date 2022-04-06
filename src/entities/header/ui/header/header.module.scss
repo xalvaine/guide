@@ -44,3 +44,18 @@
 .link {
   margin-bottom: 48px;
 }
+
+@media (max-width: 1700px) {
+  .content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .title {
+    font-size: 100px;
+  }
+
+  .logoAndBurger {
+    width: 20%;
+  }
+}

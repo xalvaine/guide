@@ -3,12 +3,15 @@ import Warn from './assets/warn.svg'
 import styles from './roboto.module.scss'
 import classNames from 'classnames'
 import { Relative } from 'shared/ui/relative'
-import {Download} from "shared/ui/download";
+import { Download } from 'shared/ui/download'
 
 export const Roboto = () => {
   return (
     <Relative className={styles.wrapper}>
-      <p className={styles.hello}>Здравствуйте, я Робото!</p>
+      <p className={styles.hello}>
+        Здравствуйте,
+        <br />я Робото!
+      </p>
       <div className={styles.content}>
         <Font className={styles.svg} />
         <div className={styles.examples}>

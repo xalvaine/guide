@@ -50,10 +50,6 @@ export const IdentityGrid = () => {
           <strong>Максимально допустимая деформация ячейки </strong>
         </Paragraph>
         <Relative>
-          <Paragraph style={{ position: `absolute`, top: 220, width: 615 }}>
-            Для адаптации модульной сетки к формату конкретного носителя
-            допускается изменение пропорций ячеек со стандартных 4:4 до 4:5.
-          </Paragraph>
           <Deformation style={{ position: `absolute`, top: -50 }} />
         </Relative>
         <BlockTitle

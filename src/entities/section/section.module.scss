@@ -19,5 +19,20 @@
 }
 
 .image {
+  height: 245px;
   flex-shrink: 0;
+}
+
+@media (max-width: 1700px) {
+  .title {
+    font-size: 100px;
+  }
+
+  .content {
+    width: 85%;
+  }
+
+  .image {
+    height: 200px;
+  }
 }

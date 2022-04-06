@@ -10,6 +10,7 @@ import br from './assets/br.png'
 import wr from './assets/wr.png'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
+import { inspect } from 'util'
 
 export const IdentityPalette = () => {
   return (
@@ -45,7 +46,11 @@ export const IdentityPalette = () => {
           }
         />
         <Solution style={{ marginLeft: -25 }} />
-        <img src={br.src} style={{ marginLeft: -35, marginTop: 100 }} alt='' />
+        <img
+          src={br.src}
+          style={{ marginLeft: -35, marginTop: 100, width: `100%` }}
+          alt=''
+        />
         <BlockTitle
           style={{ marginTop: 150 }}
           title={
@@ -56,11 +61,7 @@ export const IdentityPalette = () => {
             </>
           }
         />
-        <img
-          src={wr.src}
-          style={{ marginLeft: -35 }}
-          alt=''
-        />
+        <img src={wr.src} style={{ marginLeft: -35, width: `100%` }} alt='' />
       </Section>
       <PageToggle
         prevLink={Routes.IdentityLogo}

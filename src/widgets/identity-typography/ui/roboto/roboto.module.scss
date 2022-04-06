@@ -14,6 +14,7 @@
 }
 
 .svg {
+  width: 660px;
   flex-shrink: 0;
   margin-right: 125px;
   margin-top: 110px;
@@ -64,4 +65,14 @@
 .download {
   right: 0;
   bottom: 0;
+}
+
+@media (max-width: 1700px) {
+  .hello {
+    font-size: 170px;
+  }
+
+  .svg {
+    width: 50%;
+  }
 }

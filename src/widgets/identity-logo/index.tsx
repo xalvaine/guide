@@ -110,8 +110,8 @@ const Logo: NextPage = () => {
           Для размещения логотипа следует использовать только модули и
           изображения с несложной композицией, которые{' '}
           <strong>не будут мешать его восприятию.</strong>
-          <Logos style={{ marginLeft: -30, marginTop: 80 }} />
         </Paragraph>
+        <Logos style={{ marginLeft: -30, marginTop: 80 }} />
         <BlockTitle
           style={{ marginTop: 160 }}
           title='Неправильное использование'

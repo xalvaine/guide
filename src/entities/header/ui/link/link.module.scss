@@ -14,3 +14,9 @@
   composes: link;
   color: #008c95;
 }
+
+@media (max-width: 1700px) {
+  .link {
+    font-size: 20px;
+  }
+}

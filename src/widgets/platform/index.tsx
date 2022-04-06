@@ -19,7 +19,7 @@ export const Platform = () => {
       <Section noPadding title='Кто мы'>
         <div className={styles.i1} />
       </Section>
-      <Section noPadding title='Кто мы'>
+      <Section noPadding title='Видение'>
         <BigText style={{ marginTop: 95, marginBottom: 55 }}>
           Раскрываем потенциал друг друга, чтобы делать мир лучше
         </BigText>
