@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { Routes } from 'shared/config'
 
 import Logo from './assets/logo.svg'
-import Burger from './assets/burger.svg'
 import { Link } from '../link'
 
 import styles from './header.module.scss'
@@ -24,7 +23,6 @@ export const Header = ({ title }: Props) => {
           <div className={styles.headerTop}>
             <div className={styles.logoAndBurger}>
               <Logo />
-              <Burger />
             </div>
             <div className={styles.links}>
               <Link className={styles.link} href={Routes.About}>

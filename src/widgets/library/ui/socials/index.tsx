@@ -1,32 +1,32 @@
-import tg from './assets/telegram 1.png'
-import vk from './assets/vk 1.png'
-import zn from './assets/Zen_icon 1.png'
-import rt from './assets/Vector.png'
+import Tg from './assets/tg.svg'
+import Vk from './assets/vk.svg'
+import Zn from './assets/zen.svg'
+import Rt from './assets/rutube.svg'
 import { Download } from 'shared/ui/download'
 import styles from './socials.module.scss'
 
 interface SProps {
-  src: string
+  item: SVGGElement
 }
 
-const Social = ({ src }: SProps) => {
+const Social = ({ item: Item }: SProps) => {
   return (
     <div className={styles.item}>
       <div className={styles.imgWrapper}>
-        <img src={src} />
+        {/* @ts-ignore */}
+        <Item className={styles.img} />
       </div>
-      <Download className={styles.button} />
     </div>
   )
 }
 
-const items = [tg, vk, zn, rt]
+const items = [Tg, Vk, Zn, Rt]
 
 export const Socials = () => {
   return (
     <div className={styles.wrapper}>
-      {items.map((item) => (
-        <Social key={item.src} src={item.src} />
+      {items.map((item, index) => (
+        <Social key={index} item={item} />
       ))}
     </div>
   )

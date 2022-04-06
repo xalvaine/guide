@@ -76,6 +76,7 @@ export const Library = () => {
           content={<Const style={{ marginLeft: -15, marginBottom: -25 }} />}
         />
         <Block
+          link='xxx'
           style={{ marginTop: 120 }}
           title='Официальный канал СИБУРа на YouTube'
           content={

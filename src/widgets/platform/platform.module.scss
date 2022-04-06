@@ -29,9 +29,9 @@
 
 .i4 {
   margin-top: 24px;
-  background: url('./assets/prods2.svg') no-repeat 0 -1px;
+  background: url('./assets/prods2.svg') no-repeat 100% -1px;
   padding-bottom: calc(545 / 1920 * 100%);
-  background-size: cover;
+  background-size: contain;
 }
 
 .img {
