@@ -7,10 +7,10 @@ import mission from './assets/mission.png'
 import values from './assets/values.png'
 import values2 from './assets/values2.png'
 import positioning from './assets/positioning.png'
-import {Container} from "shared/ui/container";
+import { Container } from 'shared/ui/container'
 import Prods from './assets/prods.svg'
-import {PageToggle} from "shared/ui/page-toggle";
-import {Routes} from "shared/config";
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
 
 export const Platform = () => {
   return (
@@ -68,8 +68,8 @@ export const Platform = () => {
       </Section>
       <Section noPadding title='Цель'>
         <BigText style={{ marginTop: 95, marginBottom: 55 }}>
-          Создаем материалы для жизни. Предлагаем передовые решения <br />
-          для разных отраслей
+          Создаем материалы для жизни. Предлагаем передовые решения для разных
+          отраслей
         </BigText>
         <div className={styles.i3} />
       </Section>
