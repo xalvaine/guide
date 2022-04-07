@@ -13,7 +13,11 @@ export const Variants = ({ style }: Props) => {
     <div style={style} className={styles.wrapper}>
       <Rus style={{ marginBottom: 80 }} />
       <Eng />
-      <Download className={styles.button} />
+      <Download
+        className={styles.button}
+        link='/logo.zip'
+        download
+      />
     </div>
   )
 }

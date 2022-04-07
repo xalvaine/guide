@@ -25,12 +25,9 @@ export const Video = () => {
 
   return (
     <div className={styles.wrapper} onClick={handleToggle}>
-      <video
-        ref={videoRef}
-        src='/static/all_videos_05.mp4'
-        controls={false}
-        className={styles.video}
-      />
+      <video ref={videoRef} controls={false} className={styles.video}>
+        <source src='/static/all_videos_05.mp4' type='video/mp4' />
+      </video>
       <button
         className={classNames(isPlaying ? styles.buttonHidden : styles.button)}
       >

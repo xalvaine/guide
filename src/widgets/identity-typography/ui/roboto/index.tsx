@@ -50,7 +50,7 @@ export const Roboto = () => {
           </p>
         </div>
       </div>
-      <Download className={styles.download} />
+      <Download className={styles.download} link='/roboto.zip' download />
     </Relative>
   )
 }

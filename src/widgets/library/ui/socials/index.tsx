@@ -7,26 +7,32 @@ import styles from './socials.module.scss'
 
 interface SProps {
   item: SVGGElement
+  link: string
 }
 
-const Social = ({ item: Item }: SProps) => {
+const Social = ({ item: Item, link }: SProps) => {
   return (
-    <div className={styles.item}>
+    <a className={styles.item} href={link} target='_blank' rel="noreferrer">
       <div className={styles.imgWrapper}>
         {/* @ts-ignore */}
         <Item className={styles.img} />
       </div>
-    </div>
+    </a>
   )
 }
 
-const items = [Tg, Vk, Zn, Rt]
+const items = [
+  { icon: Tg, link: 'https://t.me/siburofficial' },
+  { icon: Vk, link: 'https://vk.com/career.sibur\n' },
+  { icon: Zn, link: 'https://zen.yandex.ru/id/6219f14454eed5711c666bcf' },
+  { icon: Rt, link: 'https://rutube.ru/channel/23872104/' },
+]
 
 export const Socials = () => {
   return (
     <div className={styles.wrapper}>
       {items.map((item, index) => (
-        <Social key={index} item={item} />
+        <Social key={index} item={item.icon} link={item.link} />
       ))}
     </div>
   )

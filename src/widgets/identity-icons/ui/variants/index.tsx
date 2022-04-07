@@ -20,14 +20,29 @@ import styles from './variants.module.scss'
 import { Fragment } from 'react'
 
 const secs = [
-  { title: `Устойчивое развитие`, link: ``, v1: I11, v2: I12 },
-  { title: `Отношения с клиентами`, link: ``, v1: I21, v2: I22 },
-  { title: `Сервисы для клиентов`, link: ``, v1: I31, v2: I32 },
-  { title: `Разное`, link: ``, v1: I41, v2: I42 },
-  { title: `Упаковка`, link: ``, v1: I51, v2: I52 },
-  { title: `Транспорт`, link: ``, v1: I61, v2: I62 },
-  { title: `Медицина`, link: ``, v1: I71, v2: I72, short: true },
-  { title: `Строительство`, link: ``, v1: I81, v2: I82 },
+  {
+    title: `Устойчивое развитие`,
+    link: `/Устойчивое развитие.zip`,
+    v1: I11,
+    v2: I12,
+  },
+  {
+    title: `Отношения с клиентами`,
+    link: `/Отношения с клиентами.zip`,
+    v1: I21,
+    v2: I22,
+  },
+  {
+    title: `Сервисы для клиентов`,
+    link: `/Сервисы для клиентов.zip`,
+    v1: I31,
+    v2: I32,
+  },
+  { title: `Разное`, link: `/Разное.zip`, v1: I41, v2: I42 },
+  { title: `Упаковка`, link: `/Упаковка.zip`, v1: I51, v2: I52 },
+  { title: `Транспорт`, link: `/Транспорт.zip`, v1: I61, v2: I62 },
+  { title: `Медицина`, link: `/Медицина.zip`, v1: I71, v2: I72, short: true },
+  { title: `Строительство`, link: `/Строительство.zip`, v1: I81, v2: I82 },
 ]
 
 export const Variants = () => {
@@ -35,11 +50,17 @@ export const Variants = () => {
     <div>
       {secs.map((sec) =>
         sec.short ? (
-          <>
+          <Fragment key={sec.title}>
             <div className={styles.titleShort}>
               <BlockTitle
                 title={sec.title}
-                extra={<Download className={styles.button} />}
+                extra={
+                  <Download
+                    download
+                    link={sec.link}
+                    className={styles.button}
+                  />
+                }
               />
             </div>
             <div className={styles.blocks}>
@@ -50,13 +71,19 @@ export const Variants = () => {
                 <sec.v2 />
               </div>
             </div>
-          </>
+          </Fragment>
         ) : (
           <Fragment key={sec.title}>
             <div className={styles.block1}>
               <BlockTitle
                 title={sec.title}
-                extra={<Download className={styles.button} />}
+                extra={
+                  <Download
+                    download
+                    link={sec.link}
+                    className={styles.button}
+                  />
+                }
               />
               <sec.v1 />
             </div>

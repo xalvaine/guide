@@ -4,9 +4,9 @@ import { Relative } from 'shared/ui/relative'
 import { Download } from 'shared/ui/download'
 import { Paragraph } from 'shared/ui/paragraph'
 import Patterns from './assets/patterns.svg'
-import {Coords} from "widgets/identity-patterns/ui/coords";
-import {PageToggle} from "shared/ui/page-toggle";
-import {Routes} from "shared/config";
+import { Coords } from 'widgets/identity-patterns/ui/coords'
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
 
 export const IdentityPatterns = () => {
   return (
@@ -14,7 +14,11 @@ export const IdentityPatterns = () => {
       <Header title='Айдентика бренда' />
       <Section title='Паттерны'>
         <Relative style={{ marginTop: 120 }}>
-          <Download style={{ top: 0, right: 0 }} />
+          <Download
+            download
+            link='/patterns.zip'
+            style={{ top: 0, right: 0 }}
+          />
           <Paragraph>
             <strong>Паттерны партнерства</strong> — это сочетание фигур
             различных форм и очертаний, которое символизирует разнообразие
