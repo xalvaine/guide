@@ -11,8 +11,15 @@ import { Container } from 'shared/ui/container'
 import Prods from './assets/prods.svg'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
+import { useEffect, useState } from 'react'
 
 export const Platform = () => {
+  const [matches, setMatches] = useState<boolean>()
+
+  useEffect(() => {
+    setMatches(window?.matchMedia(`(min-width: 1700px)`).matches)
+  }, [])
+
   return (
     <>
       <Header title='Платформа бренда' />
@@ -51,8 +58,12 @@ export const Platform = () => {
         noPadding
         title={
           <>
-            Позициони-
-            <br />
+            Позициони
+            {matches && (
+              <>
+                -<br />
+              </>
+            )}
             рование
           </>
         }
