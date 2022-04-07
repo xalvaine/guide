@@ -106,7 +106,13 @@ export const Trainer = () => {
                 </p>
               </div>
               <div className={styles.buttons}>
-                <button className={styles.download}>Скачать результат</button>
+                <a
+                  download
+                  href={`/results/${score + 1}.jpg`}
+                  className={styles.download}
+                >
+                  Скачать результат
+                </a>
                 <button
                   className={styles.nextQuestion}
                   style={{ marginTop: 10 }}

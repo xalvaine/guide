@@ -296,6 +296,8 @@
 }
 
 .download {
+  text-decoration: none;
+  text-align: center;
   composes: nextQuestion;
   background: #008C95;
   /* SIBUR White */
