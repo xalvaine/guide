@@ -53,7 +53,7 @@ export const Trainer = () => {
 
   return (
     <>
-      <Header title='Тренажёр' />
+      <Header title='Тренажер' />
       <Section
         title={
           <p className={styles.title}>
