@@ -1,5 +1,7 @@
 .button {
   position: static;
+  display: block;
+  margin-left: 10px;
 }
 
 .block1 {
@@ -73,5 +75,17 @@
     flex-basis: 50%;
     background: #77e2c3;
     padding: 47px 125px 55px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .block1 {
+    padding: 50px 15px 27px;
+    margin: 0;
+  }
+
+  .block3 {
+    padding: 35px 15px 27px;
+    margin: 0;
   }
 }
