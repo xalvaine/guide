@@ -21,10 +21,6 @@ export const Trainer = () => {
 
   const { isMobile, rendered } = useIsMobile()
 
-  if (!rendered) {
-    return null
-  }
-
   const getOnSelectVariant = useCallback(
     (variant: Variant, index: number) => {
       return () => {
@@ -59,6 +55,10 @@ export const Trainer = () => {
     setScore(0)
     setQuestionNumber(1)
     setSelectedVariantIndex(undefined)
+  }
+
+  if (!rendered) {
+    return null
   }
 
   return (
