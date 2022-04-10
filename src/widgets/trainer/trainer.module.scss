@@ -32,6 +32,7 @@
 
 .variants {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .variantWrapper {
@@ -116,7 +117,6 @@
     rgba(252, 120, 110, 0.74) 149.94%
   );
   border: 1.27546px solid #fd6954;
-  box-sizing: border-box;
   box-shadow: 0px 0px 16.993px rgba(224, 78, 57, 0.21);
   border-radius: 40.7325px;
   font-family: Roboto, sans-serif;
@@ -134,10 +134,11 @@
 
 .imageContent {
   width: 530px;
+  height: 350px;
   border-radius: 40px;
   display: flex;
   min-height: 80px;
-  padding: 36px 0;
+  padding: 36px 96px;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -148,6 +149,11 @@
   /* SIBUR Body Text */
 
   color: #00323d;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .content {
@@ -223,10 +229,9 @@
   line-height: 55px;
   /* identical to box height, or 121% */
 
-
   /* SIBUR Body Text */
 
-  color: #00323D;
+  color: #00323d;
 }
 
 .resScore {
@@ -236,11 +241,9 @@
   line-height: 118px;
   /* identical to box height, or 148% */
 
-
   /* SIBUR Body Text */
 
-  color: #00323D;
-
+  color: #00323d;
 }
 
 .resSubtitle {
@@ -250,11 +253,9 @@
   line-height: 26px;
   /* or 121% */
 
-
   /* SIBUR Body Text */
 
-  color: #00323D;
-
+  color: #00323d;
 }
 
 .resDesc {
@@ -265,7 +266,7 @@
 
   /* SIBUR Body Text */
 
-  color: #00323D;
+  color: #00323d;
 }
 
 .success {
@@ -282,10 +283,9 @@
   line-height: 100%;
   /* identical to box height, or 96px */
 
-
   /* SIBUR Body Text */
 
-  color: #00323D;
+  color: #00323d;
   margin-bottom: 56px;
 }
 
@@ -299,17 +299,172 @@
   text-decoration: none;
   text-align: center;
   composes: nextQuestion;
-  background: #008C95;
+  background: #008c95;
   /* SIBUR White */
 
-  border: 1.27546px solid #FFFFFF;
+  border: 1.27546px solid #ffffff;
   box-sizing: border-box;
   box-shadow: 0px 0px 40px rgba(153, 153, 153, 0.25);
+}
+
+.mobileOnly {
+  display: none;
 }
 
 @media (max-width: 1700px) {
   .title {
     padding: 0 20px;
     width: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block;
+  }
+
+  .nextQuestion {
+    padding: 12px 40px;
+    margin-top: 33px;
+  }
+
+  .wrapper {
+    padding-top: 40px;
+    width: 100%;
+  }
+
+  .question {
+    margin-top: 10px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .variant {
+    border-radius: 24px;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      bottom: -3px;
+    }
+  }
+
+  .variantWrapper {
+    max-width: 311px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .textContent {
+    width: 311px;
+    min-height: 48px;
+    padding: 0 35px;
+    font-size: 12px;
+    line-height: 14px;
+    box-shadow: 0px 0px 25px rgba(216, 216, 216, 0.2);
+  }
+
+  .description {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 120.69%;
+    padding: 0;
+    width: 160px;
+  }
+
+  .imageContent {
+    width: 160px;
+    min-height: 80px;
+    padding: 14px 14px;
+    height: 170px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .imageDescription {
+    width: 160px;
+  }
+
+  .imgDesc {
+    width: 160px;
+  }
+
+  .i11_1 {
+    border-radius: 24px;
+    width: 160px;
+    height: 172px;
+    background-position: 50%;
+  }
+
+  .i11_2 {
+    border-radius: 24px;
+    width: 160px;
+    height: 172px;
+    background-position: 50%;
+  }
+
+  .i20_1 {
+    border-radius: 24px;
+    width: 160px;
+    height: 172px;
+    background-image: url('./assets/i20_1m.svg');
+    background-size: cover;
+  }
+
+  .i20_2 {
+    border-radius: 24px;
+    width: 160px;
+    height: 172px;
+    background-image: url('./assets/i20_2m.svg');
+    background-size: cover;
+  }
+
+  .finishTitle {
+    font-size: 20px;
+    line-height: 100%;
+    margin-bottom: 25px;
+  }
+
+  .results {
+    width: 100%;
+    padding: 28px 65px 28px;
+    border: 0.62638px solid #999999;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20.8793px rgba(153, 153, 153, 0.2);
+    border-radius: 16.7035px;
+
+  }
+
+  .resTitle {
+    font-size: 18.5769px;
+    line-height: 22px;
+  }
+
+  .resScore {
+    margin-top: -13px;
+    font-size: 41.4235px;
+    line-height: 61px;
+  }
+
+  .resSubtitle {
+    margin-top: -10px;
+    font-weight: 400;
+    font-size: 8.81389px;
+    line-height: 11px;
+  }
+
+  .resDesc {
+    padding-left: 20px;
+    margin-top: 20px;
+    font-size: 6.30956px;
+    line-height: 7px;
   }
 }

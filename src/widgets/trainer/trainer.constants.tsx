@@ -23,6 +23,7 @@ import I20_D1 from './assets/i20_d1.svg'
 import I20_D2 from './assets/i20_d2.svg'
 import I20_D3 from './assets/i20_d3.svg'
 import I20_D4 from './assets/i20_d4.svg'
+import I20_D4M from './assets/i20_d4m.svg'
 
 export const questions: Questions = [
   {
@@ -185,9 +186,9 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Верно,</b> на первом плакате используется шрифт Roboto.
-          </>
+          </div>
         ),
       },
       {
@@ -197,11 +198,11 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно,</b> второй плакат написан шрифтом Din Pro — это бывший
             фирменный шрифт СИБУРа. Запомните, как выглядит новый шрифт Roboto
             на первом плакате.
-          </>
+          </div>
         ),
       },
     ],
@@ -637,15 +638,15 @@ export const questions: Questions = [
             <b>Верно.</b>
             <br />
             <br />
-            Черный вариант логотипа подходит <br />
-            для носителей с ограничениями по цвету.
+            Черный вариант логотипа подходит для носителей с ограничениями по
+            цвету.
             <br />
             <br />
             <I20_D1 />
             <br />
             <br />
-            Бирюзовый вариант логотипа можно применять <br />в сочетании со
-            светлым фоном, либо на фоне <br />в цветах фирменной гаммы.
+            Бирюзовый вариант логотипа можно применять в сочетании со светлым
+            фоном, либо на фоне <br />в цветах фирменной гаммы.
             <br />
             <br />
             <I20_D2 />
@@ -661,7 +662,8 @@ export const questions: Questions = [
             Варианты правильных логотипов:
             <br />
             <br />
-            <I20_D4 />
+            <I20_D4 className={styles.desktopOnly} />
+            <I20_D4M className={styles.mobileOnly} />
           </div>
         ),
       },
@@ -672,15 +674,15 @@ export const questions: Questions = [
             <b>Неверно.</b>
             <br />
             <br />
-            Черный вариант логотипа подходит <br />
-            для носителей с ограничениями по цвету.
+            Черный вариант логотипа подходит для носителей с ограничениями по
+            цвету.
             <br />
             <br />
             <I20_D1 />
             <br />
             <br />
-            Бирюзовый вариант логотипа можно применять <br />в сочетании со
-            светлым фоном, либо на фоне <br />в цветах фирменной гаммы.
+            Бирюзовый вариант логотипа можно применять в сочетании со светлым
+            фоном, либо на фоне <br />в цветах фирменной гаммы.
             <br />
             <br />
             <I20_D2 />
@@ -696,7 +698,8 @@ export const questions: Questions = [
             Варианты правильных логотипов:
             <br />
             <br />
-            <I20_D4 />
+            <I20_D4 className={styles.desktopOnly} />
+            <I20_D4M className={styles.mobileOnly} />
           </div>
         ),
       },

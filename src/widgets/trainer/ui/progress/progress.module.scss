@@ -36,3 +36,27 @@
   border-radius: 75px;
   background: #77e2c3;
 }
+
+@media (max-width: 1023px) {
+  .wrapper {
+    border-radius: 38.4451px;
+    width: 263px;
+    padding: 11px 12px;
+    border-width: 1px;
+  }
+
+  .progress {
+    height: 7px;
+  }
+
+  .progressLine {
+    height: 7px;
+  }
+
+  .text {
+    font-size: 10.252px;
+    line-height: 12px;
+    padding-left: 6px;
+    width: 28px;
+  }
+}
