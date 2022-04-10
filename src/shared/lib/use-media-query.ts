@@ -25,7 +25,7 @@ const useMediaQuery = (query: string) => {
 export { useMediaQuery }
 
 export const useIsMobile = () => {
-  const { matches, rendered } = useMediaQuery(`(max-width: 1023px)`)
+  const { matches, rendered } = useMediaQuery(`(max-width: 1200px)`)
 
   return { isMobile: matches, rendered }
 }
