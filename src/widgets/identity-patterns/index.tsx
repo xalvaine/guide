@@ -4,20 +4,29 @@ import { Relative } from 'shared/ui/relative'
 import { Download } from 'shared/ui/download'
 import { Paragraph } from 'shared/ui/paragraph'
 import Patterns from './assets/patterns.svg'
+import PatternsM from './assets/patterns_m.svg'
 import { Coords } from 'widgets/identity-patterns/ui/coords'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
+import { useIsMobile } from 'shared/lib'
 
 export const IdentityPatterns = () => {
+  const { isMobile } = useIsMobile()
+
   return (
     <>
       <Header title='Айдентика бренда' />
       <Section title='Паттерны'>
-        <Relative style={{ marginTop: 120 }}>
+        <Relative style={{ marginTop: isMobile ? 40 : 120 }}>
           <Download
             download
             link='/patterns.zip'
-            style={{ top: 0, right: 0 }}
+            style={{
+              top: isMobile ? undefined : 0,
+              right: isMobile ? undefined : 0,
+              left: isMobile ? 0 : undefined,
+              bottom: isMobile ? -45 : undefined,
+            }}
           />
           <Paragraph>
             <strong>Паттерны партнерства</strong> — это сочетание фигур
@@ -33,8 +42,14 @@ export const IdentityPatterns = () => {
             креативные компоновки.
           </Paragraph>
         </Relative>
-        <Patterns style={{ marginTop: 60 }} />
-        <Coords />
+        {isMobile ? (
+          <PatternsM style={{ marginTop: 90 }} />
+        ) : (
+          <>
+            <Patterns style={{ marginTop: 60 }} />
+            <Coords />
+          </>
+        )}
       </Section>
       <PageToggle
         prevLink={Routes.IdentityPalette}
