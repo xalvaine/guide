@@ -76,3 +76,21 @@
     width: 50%;
   }
 }
+
+@media (max-width: 1023px) {
+  .wrapper {
+    margin-bottom: 110px;
+  }
+
+  .hello {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 5px;
+  }
+
+  .download {
+    right: unset;
+    bottom: -60px;
+    left: 0;
+  }
+}

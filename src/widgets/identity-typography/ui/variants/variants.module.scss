@@ -26,3 +26,28 @@
   color: #00313c;
   margin-bottom: 45px;
 }
+
+@media (max-width: 1023px) {
+  .wrapper {
+    display: block;
+  }
+
+  .variant {
+    &:first-of-type {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 12px;
+  }
+}

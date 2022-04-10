@@ -5,18 +5,23 @@ import { Roboto } from 'widgets/identity-typography/ui/roboto'
 import { BlockTitle } from 'entities/block-title/ui'
 import { Variants } from 'widgets/identity-typography/ui/variants'
 import Placement from './assets/placement.svg'
+import Placement_m_1 from './assets/placement_m_1.svg'
+import Placement_m_2 from './assets/placement_m_2.svg'
 import Ex1 from './assets/ex1.svg'
 import Ex2 from './assets/ex2.svg'
 import Ex3 from './assets/ex3.svg'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
+import { useIsMobile } from 'shared/lib'
 
 export const IdentityTypography = () => {
+  const { isMobile } = useIsMobile()
+
   return (
     <>
       <Header title='Айдентика бренда' />
       <Section title='Типографика'>
-        <Paragraph style={{ marginTop: 120 }}>
+        <Paragraph style={{ marginTop: isMobile ? 40 : 120 }}>
           Везде, где возможно, в качестве корпоративного шрифта мы используем
           Roboto. Roboto — это семейство современных, легких для чтения рубленых
           шрифтов геометрического дизайна. Простые и незатейливые очертания
@@ -53,7 +58,10 @@ export const IdentityTypography = () => {
           </b>
         </Paragraph>
         <Variants />
-        <BlockTitle title='Размещение' style={{ marginTop: 160 }} />
+        <BlockTitle
+          title='Размещение'
+          style={{ marginTop: isMobile ? 40 : 160 }}
+        />
         <Paragraph>
           Текст следует выравнивать единообразно в пределах модульной сетки. Его
           можно размещать поверх выбранного паттерна или фотоизображений. Текст
@@ -94,19 +102,30 @@ export const IdentityTypography = () => {
           не обязательно выравнивать его вертикально по верхнему или нижнему
           краю: в этом случае допускается выравнивание текста по центру блока.
         </Paragraph>
-        <Placement style={{ marginTop: 100, marginLeft: -15 }} />
-        <BlockTitle title='Примеры' style={{ marginTop: 160 }} />
-        <div
-          style={{
-            display: `flex`,
-            flexDirection: `column`,
-            marginLeft: -15,
-          }}
-        >
-          <Ex1 />
-          <Ex2 style={{ marginTop: 80 }} />
-          <Ex3 style={{ marginTop: 60 }} />
-        </div>
+        {isMobile ? (
+          <Placement_m_1 style={{ marginTop: 28, marginLeft: -15 }} />
+        ) : (
+          <Placement style={{ marginTop: 100, marginLeft: -15 }} />
+        )}
+        <BlockTitle
+          title='Примеры'
+          style={{ marginTop: isMobile ? 32 : 160 }}
+        />
+        {isMobile ? (
+          <Placement_m_2 style={{ marginLeft: -12 }} />
+        ) : (
+          <div
+            style={{
+              display: `flex`,
+              flexDirection: `column`,
+              marginLeft: -15,
+            }}
+          >
+            <Ex1 />
+            <Ex2 style={{ marginTop: 80 }} />
+            <Ex3 style={{ marginTop: 60 }} />
+          </div>
+        )}
       </Section>
       <PageToggle
         prevLink={Routes.IdentityGrid}
