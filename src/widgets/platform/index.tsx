@@ -31,7 +31,19 @@ export const Platform = () => {
   return (
     <>
       <Header title='Платформа бренда' />
-      <Section title={isMobile ? 'Платформа бренда' : 'Кто мы'}>
+      <Section
+        title={
+          isMobile ? (
+            <>
+              Платформа
+              <br />
+              бренда
+            </>
+          ) : (
+            'Кто мы'
+          )
+        }
+      >
         {isMobile ? (
           <>
             <BlockTitle title='Кто мы' style={{ marginTop: 40 }} />
