@@ -1,16 +1,27 @@
 .button {
   position: fixed;
-  right: 66px;
-  bottom: 120px;
+  right: 41px;
+  bottom: 97px;
   background: none;
   border: none;
   cursor: pointer;
   transition: opacity .3s;
   opacity: 1;
+  width: 129px;
+  height: 129px;
 }
 
 .buttonHidden {
   composes: button;
   opacity: 0;
   pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+  .button {
+    right: 2px;
+    bottom: 57px;
+    width: 77px;
+    height: 77px;
+  }
 }

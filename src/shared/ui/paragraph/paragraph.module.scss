@@ -11,3 +11,14 @@
   composes: base;
   width: 1000px;
 }
+
+@media (max-width: 1023px) {
+  .base {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .s {
+    width: 100%;
+  }
+}

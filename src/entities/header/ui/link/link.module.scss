@@ -20,3 +20,16 @@
     font-size: 20px;
   }
 }
+
+@media (max-width: 1023px) {
+  .link {
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    color: #008c95;
+  }
+
+  .linkActive {
+    color: #e04e39;
+  }
+}

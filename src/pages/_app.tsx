@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <ScrollToTop />
-      <Plug />
+      {/*<Plug />*/}
     </>
   )
 }

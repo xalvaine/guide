@@ -5,15 +5,20 @@ import { BlockTitle } from 'entities/block-title/ui'
 import { Paragraph } from 'shared/ui/paragraph'
 import ph from './assets/fc72898c 1.png'
 import { ScrollToTop } from 'entities/scroll-to-top'
-import {PageToggle} from "shared/ui/page-toggle";
-import {Routes} from "shared/config";
+import { PageToggle } from 'shared/ui/page-toggle'
+import { Routes } from 'shared/config'
+import { useIsMobile } from 'shared/lib'
 
 const About: NextPage = () => {
+  const { isMobile } = useIsMobile()
   return (
     <>
       <Header title='Новый бренд сибура' />
       <Section title='Введение'>
-        <BlockTitle style={{ marginTop: 120 }} title='О чем этот гайд' />
+        <BlockTitle
+          style={{ marginTop: isMobile ? 40 : 120 }}
+          title='О чем этот гайд'
+        />
         <Paragraph>
           <b>Брендгайд СИБУРа</b> — это набор правил и советов, которые помогут
           оформлять любые материалы компании в едином стиле. Здесь вы найдете
@@ -25,7 +30,7 @@ const About: NextPage = () => {
           поможет уточнить неоднозначные моменты и проверить готовый материал.
         </Paragraph>
         <BlockTitle
-          style={{ marginTop: 164 }}
+          style={{ marginTop: isMobile ? 36 : 164 }}
           title='Как пользоваться гайдом'
         />
         <Paragraph>
@@ -60,15 +65,18 @@ const About: NextPage = () => {
       >
         <div
           style={{
-            paddingTop: 90,
+            paddingTop: isMobile ? 40 : 90,
             display: `flex`,
             alignItems: `start`,
+            flexDirection: isMobile ? `column` : `row`,
           }}
         >
           <Paragraph style={{ width: 944 }}>
-            В жизни каждого из нас происходит множество перемен. Одни <br />
+            В жизни каждого из нас происходит множество перемен. Одни{' '}
+            {isMobile && <br />}
             двигают нас вперед, другие – отбрасывают на несколько шагов назад.
-            Но объединяет их одно – незнакомые ранее задачи требуют <br />
+            Но объединяет их одно – незнакомые ранее задачи требуют{' '}
+            {isMobile && <br />}
             гибкости в поиске решений и позволяют учиться новому и расти.
             <br />
             <br />
@@ -77,9 +85,12 @@ const About: NextPage = () => {
             обновляем бренд, обновляем себя и свое видение мира.
             <br />
             <br />
-            <b>СИБУР</b> – это надежный партнер, который дает возможность <br />
-            развиваться и улучшать качество жизни. Мы создаем рабочие <br />
-            места в смежных областях, поддерживаем наших сотрудников, <br />
+            <b>СИБУР</b> – это надежный партнер, который дает возможность{' '}
+            {isMobile && <br />}
+            развиваться и улучшать качество жизни. Мы создаем рабочие{' '}
+            {isMobile && <br />}
+            места в смежных областях, поддерживаем наших сотрудников,{' '}
+            {isMobile && <br />}
             строим взаимовыгодное сотрудничество с клиентами и партнерами,
             думаем о конечном потребителе и непрерывно совершенствуемся.
             Стремление к росту, партнерство и устойчивое развитие – не пустой{' '}
@@ -88,7 +99,8 @@ const About: NextPage = () => {
             <br />
             <br />
             Те идеи, которые заложены в новой концепции бренда, проверены
-            временем и наглядно демонстрируют то, во что мы верим. Как мы <br />
+            временем и наглядно демонстрируют то, во что мы верим. Как мы{' '}
+            {isMobile && <br />}
             шли к новому бренду и какие идеи отразили в нем, вы узнаете здесь.
             <br />
             <br />
@@ -102,13 +114,16 @@ const About: NextPage = () => {
               Михаил Карисалов
             </b>
           </Paragraph>
-          <img src={ph.src} style={{ marginLeft: 80 }} />
+          <img
+            src={ph.src}
+            style={{
+              width: isMobile ? 221 : 0,
+              margin: isMobile ? `12px auto 0` : `0 0 80px`,
+            }}
+          />
         </div>
       </Section>
-      <PageToggle
-        nextLink={Routes.Platform}
-        nextTitle='Платформа бренда'
-      />
+      <PageToggle nextLink={Routes.Platform} nextTitle='Платформа бренда' />
       <ScrollToTop />
     </>
   )

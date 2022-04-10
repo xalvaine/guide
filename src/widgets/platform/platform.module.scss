@@ -46,3 +46,30 @@
   line-height: 28px;
   margin-top: 74px;
 }
+
+@media (max-width: 1023px) {
+  .i2 {
+    margin-top: 25px;
+    background-image: url('./assets/principles_m.svg');
+    padding-bottom: calc(254 / 375 * 100%);
+  }
+
+  .i3 {
+    margin-top: 0;
+    background-image: url('./assets/purpose_m.svg');
+    padding-bottom: calc(513 / 375 * 100%);
+  }
+
+  .i4 {
+    margin-top: 24px;
+    background: url('./assets/prods2_m.svg');
+    padding-bottom: calc(421 / 375 * 100%);
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 15px;
+  }
+}

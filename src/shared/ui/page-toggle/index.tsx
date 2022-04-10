@@ -2,7 +2,7 @@ import Ar1 from './assets/Group 2518.svg'
 import Ar2 from './assets/ar2.svg'
 import styles from './page-toggle.module.scss'
 import Link from 'next/link'
-import classNames from "classnames";
+import classNames from 'classnames'
 
 interface Props {
   prevTitle?: string
@@ -25,17 +25,17 @@ export const PageToggle = ({
         <div className={isEdge ? styles.center : styles.left}>
           <Link href={prevLink} passHref>
             <a>
-              <Ar1 />
+              <Ar1 className={styles.icon} />
             </a>
           </Link>
           <p className={styles.text}>Вернуться на страницу «{prevTitle}»</p>
         </div>
       )}
       {nextTitle && nextLink && (
-        <div className={isEdge ? styles.center :styles.right}>
+        <div className={isEdge ? styles.center : styles.right}>
           <Link href={nextLink} passHref>
-            <a>
-              <Ar2 />
+            <a style={{ display: `flex` }}>
+              <Ar2 className={styles.icon} />
             </a>
           </Link>
           <p className={styles.text}>Перейти на страницу «{nextTitle}»</p>
