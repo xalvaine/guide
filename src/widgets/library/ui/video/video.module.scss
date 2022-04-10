@@ -31,10 +31,27 @@
   transition: opacity 0.3s;
   opacity: 0;
   cursor: pointer;
+  width: 205px;
+  height: auto;
 }
 
 .buttonHidden {
   composes: button;
   pointer-events: none;
   opacity: 0;
+}
+
+@media (max-width: 1023px) {
+  .video {
+    border-radius: 10px;
+  }
+
+  .button {
+    opacity: 1;
+    width: 45px;
+  }
+
+  .buttonHidden {
+    opacity: 0;
+  }
 }

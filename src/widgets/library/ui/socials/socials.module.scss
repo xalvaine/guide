@@ -31,3 +31,24 @@
     fill: #e04e39;
   }
 }
+
+@media (max-width: 1023px) {
+  .wrapper {
+    justify-content: space-between;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .item {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .imgWrapper {
+    height: auto;
+  }
+
+  .button {
+    margin-top: 15px;
+  }
+}
