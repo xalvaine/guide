@@ -8,7 +8,11 @@ import { Download } from 'shared/ui/download'
 import { useIsMobile } from 'shared/lib'
 
 export const Roboto = () => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <Relative className={styles.wrapper}>

@@ -136,7 +136,11 @@ const content = [
 ]
 
 export const Sections = () => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <>

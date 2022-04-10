@@ -42,7 +42,11 @@ const items = [
 ]
 
 export const Socials = () => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <div className={styles.wrapper}>

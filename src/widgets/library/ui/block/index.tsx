@@ -14,7 +14,11 @@ interface Props {
 }
 
 export const Block = ({ content, link, title, style, download }: Props) => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <div style={style}>

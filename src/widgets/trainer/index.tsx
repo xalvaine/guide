@@ -19,7 +19,11 @@ export const Trainer = () => {
 
   const [started, setStarted] = useState(false)
 
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   const getOnSelectVariant = useCallback(
     (variant: Variant, index: number) => {

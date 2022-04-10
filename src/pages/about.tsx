@@ -8,9 +8,15 @@ import { ScrollToTop } from 'entities/scroll-to-top'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
 import { useIsMobile } from 'shared/lib'
+import { useEffect } from 'react'
 
 const About: NextPage = () => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
+
   return (
     <>
       <Header title='Новый бренд сибура' />

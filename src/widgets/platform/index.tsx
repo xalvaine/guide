@@ -26,7 +26,11 @@ export const Platform = () => {
     setMatches(window?.matchMedia(`(min-width: 1700px)`).matches)
   }, [])
 
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <>

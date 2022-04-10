@@ -106,7 +106,11 @@ const secs = [
 ]
 
 export const Variants = () => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <div>

@@ -10,7 +10,11 @@ import { Routes } from 'shared/config'
 import { useIsMobile } from 'shared/lib'
 
 export const IdentityPhotoStyle = () => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <>

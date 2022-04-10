@@ -31,7 +31,11 @@ const contacts: Props[] = [
 ]
 
 export const IdentityContacts: NextPage = () => {
-  const { isMobile } = useIsMobile()
+  const { isMobile, rendered } = useIsMobile()
+
+  if (!rendered) {
+    return null
+  }
 
   return (
     <>
