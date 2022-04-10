@@ -63,6 +63,7 @@
   .i4 {
     margin-top: 24px;
     background: url('./assets/prods2_m.svg') no-repeat;
+    background-size: calc(100% + 22px);
     padding-bottom: calc(421 / 375 * 100%);
   }
 
