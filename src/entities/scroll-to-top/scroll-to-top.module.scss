@@ -5,7 +5,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   opacity: 1;
   width: 129px;
   height: 129px;
@@ -19,9 +19,9 @@
 
 @media (max-width: 1023px) {
   .button {
-    right: 2px;
-    bottom: 57px;
-    width: 77px;
-    height: 77px;
+    right: -5px;
+    bottom: 51px;
+    width: 75px;
+    height: 75px;
   }
 }

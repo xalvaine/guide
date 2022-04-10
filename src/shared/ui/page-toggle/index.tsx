@@ -24,7 +24,7 @@ export const PageToggle = ({
       {prevTitle && prevLink && (
         <div className={isEdge ? styles.center : styles.left}>
           <Link href={prevLink} passHref>
-            <a>
+            <a style={{ display: `flex` }}>
               <Ar1 className={styles.icon} />
             </a>
           </Link>
