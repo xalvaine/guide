@@ -25,3 +25,28 @@
 .image {
   margin-top: 10px;
 }
+
+@media (max-width: 1023px) {
+  .item {
+    width: 100%;
+  }
+
+  .image {
+    width: calc(100% + 5px);
+    height: 230px;
+    object-fit: cover;
+    margin-left: -5px;
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    height: auto;
+  }
+}

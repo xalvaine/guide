@@ -4,9 +4,16 @@ import S3 from './assets/s3.svg'
 import S4 from './assets/s4.svg'
 import S5 from './assets/s5.svg'
 import S6 from './assets/s6.svg'
+import S1M from './assets/s1m.svg'
+import S2M from './assets/s2m.svg'
+import S3M from './assets/s3m.svg'
+import S4M from './assets/s4m.svg'
+import S5M from './assets/s5m.svg'
+import S0M from './assets/s0m.svg'
 import { Fragment } from 'react'
 import { BlockTitle } from 'entities/block-title/ui'
 import { Paragraph } from 'shared/ui/paragraph'
+import { useIsMobile } from 'shared/lib'
 
 const content = [
   {
@@ -22,6 +29,7 @@ const content = [
       </>
     ),
     image: S1,
+    mobileImage: S0M,
   },
   {
     title: `Имидж компании. Наши объекты`,
@@ -44,6 +52,7 @@ const content = [
       </>
     ),
     image: S2,
+    mobileImage: S1M,
   },
   {
     title: `Имидж компании. Экология`,
@@ -64,6 +73,7 @@ const content = [
       </>
     ),
     image: S3,
+    mobileImage: S2M,
   },
   {
     title: `Имидж компании. Инновации`,
@@ -72,17 +82,22 @@ const content = [
         СИБУР — в авангарде рынка «умных» решений, и мы постоянно стремимся к
         большему. <br />
         Наша цель — сделать мир лучше для всех. Наша увлеченность освоением
-        передовых <br />технологий и стремление в полной мере задействовать их
-        потенциал находит отражение <br />и в используемых нами фотографиях: это
-        и Фотостиль профессионалов, совместными <br />усилиями создающих новые
-        инновационные решения, уверенно и грамотно эксплуатирующих<br />
+        передовых <br />
+        технологий и стремление в полной мере задействовать их потенциал находит
+        отражение <br />и в используемых нами фотографиях: это и Фотостиль
+        профессионалов, совместными <br />
+        усилиями создающих новые инновационные решения, уверенно и грамотно
+        эксплуатирующих
+        <br />
         технологическое оборудование, и локации, сама атмосфера которых
-        пропитана духом <br />новаторства и прогресса. По возможности следует включать
-        в композицию цвета бренда <br />
+        пропитана духом <br />
+        новаторства и прогресса. По возможности следует включать в композицию
+        цвета бренда <br />
         как отсылку к нашей фирменной палитре.
       </>
     ),
     image: S4,
+    mobileImage: S3M,
   },
   {
     title: `Подразделения компании`,
@@ -99,6 +114,7 @@ const content = [
       </>
     ),
     image: S5,
+    mobileImage: S4M,
   },
   {
     title: `Продукция компании`,
@@ -115,17 +131,33 @@ const content = [
       </>
     ),
     image: S6,
+    mobileImage: S5M,
   },
 ]
 
 export const Sections = () => {
+  const { isMobile } = useIsMobile()
+
   return (
     <>
       {content.map((item) => (
         <Fragment key={item.title}>
-          <BlockTitle style={{ marginTop: 160 }} title={item.title} />
-          <Paragraph style={{ width: 1330 }}>{item.text}</Paragraph>
-          <item.image style={{ marginTop: 60 }} />
+          <BlockTitle
+            style={{ marginTop: isMobile ? 45 : 160 }}
+            title={item.title}
+          />
+          <Paragraph
+            style={{
+              width: isMobile ? undefined : 1330,
+            }}
+          >
+            {item.text}
+          </Paragraph>
+          {isMobile ? (
+            <item.mobileImage style={{ marginTop: 12 }} />
+          ) : (
+            <item.image style={{ marginTop: 60 }} />
+          )}
         </Fragment>
       ))}
     </>
