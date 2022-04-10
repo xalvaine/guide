@@ -547,7 +547,7 @@ export const questions: Questions = [
       {
         content: (
           <div className={styles.imageContent3}>
-            <I17_2 />
+            <I17_2 style={{marginRight: -12}} />
           </div>
         ),
         description: (
