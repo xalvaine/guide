@@ -11,6 +11,7 @@
 
 .contact {
   display: flex;
+  align-items: center;
   margin-bottom: 22px;
 }
 
@@ -38,4 +39,35 @@
   /* SIBUR Body Text */
 
   color: #00323d;
+}
+
+.icon {
+  width: 45px;
+  height: 36px;
+}
+
+
+@media (max-width: 1023px) {
+  .contacts {
+    margin-top: 25px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 16px;
+  }
+
+  .data {
+    margin-left: 10px;
+  }
+
+  .email {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .name {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }

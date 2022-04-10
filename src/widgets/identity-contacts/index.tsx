@@ -7,6 +7,8 @@ import Cont from './assets/cont.svg'
 import styles from './identity-contacts.module.scss'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
+import { useIsMobile } from 'shared/lib'
+import { Section } from 'entities/section/ui'
 
 interface Props {
   email: string
@@ -15,7 +17,7 @@ interface Props {
 
 const Contact = ({ email, name }: Props) => (
   <div className={styles.contact}>
-    <Cont />
+    <Cont className={styles.icon} />
     <div className={styles.data}>
       <p className={styles.email}>{email}</p>
       <p className={styles.name}>{name}</p>
@@ -29,24 +31,48 @@ const contacts: Props[] = [
 ]
 
 export const IdentityContacts: NextPage = () => {
+  const { isMobile } = useIsMobile()
+
   return (
     <>
       <Header title='Контакты' />
-      <Container style={{ marginTop: 142 }}>
-        <BlockTitle title='Команда брендинга' />
-        <div className={styles.wrapper}>
-          <Paragraph style={{ width: 779 }}>
-            Применять обновленный бренд непросто. <br />
-            Но у вас есть поддержка. Команда брендинга <br />
-            готова проконсультировать и ответить на все вопросы.
+      {isMobile ? (
+        <Section
+          title={
+            <>
+              Команда <br />
+              брендинга
+            </>
+          }
+        >
+          <Paragraph style={{ marginTop: 40 }}>
+            Применять обновленный бренд непросто. Но у вас есть поддержка.
+            Команда брендинга готова проконсультировать и ответить на все
+            вопросы.
           </Paragraph>
           <div className={styles.contacts}>
             {contacts.map(({ email, name }) => (
               <Contact key={email} email={email} name={name} />
             ))}
           </div>
-        </div>
-      </Container>
+        </Section>
+      ) : (
+        <Container style={{ marginTop: 142 }}>
+          <BlockTitle title='Команда брендинга' />
+          <div className={styles.wrapper}>
+            <Paragraph style={{ width: 779 }}>
+              Применять обновленный бренд непросто. <br />
+              Но у вас есть поддержка. Команда брендинга <br />
+              готова проконсультировать и ответить на все вопросы.
+            </Paragraph>
+            <div className={styles.contacts}>
+              {contacts.map(({ email, name }) => (
+                <Contact key={email} email={email} name={name} />
+              ))}
+            </div>
+          </div>
+        </Container>
+      )}
       <PageToggle
         prevLink={Routes.Trainer}
         prevTitle='Тренажер'
