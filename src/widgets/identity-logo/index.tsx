@@ -6,50 +6,81 @@ import { Variants } from './ui/variants'
 import { BlockTitle } from 'entities/block-title/ui'
 import { Title } from './ui/title'
 import SafeArea from './assets/safe-area.svg'
+import SafeAreaM from './assets/safe-area_m.svg'
 import BaseBlock from './assets/base-block.svg'
+import BaseBlockM from './assets/base-block_m.svg'
 import Sizes from './assets/sizes.svg'
+import SizesM from './assets/sizes_m.svg'
 import Banner from './assets/banner.svg'
 import Logos from './assets/logos.svg'
+import LogosM from './assets/logos_m.svg'
 import Backgrounds from './assets/backgrounds.svg'
+import BackgroundsM from './assets/backgrounds_m.svg'
 import WrongUsages from './assets/wrong-usages.svg'
+import WrongUsagesM from './assets/wrong-usages_m.svg'
 import Slogan from './assets/slogan.svg'
+import SloganM from './assets/slogan_m.svg'
 import Placement from './assets/placement.svg'
+import PlacementM from './assets/placement_m.svg'
 import styles from './logo.module.scss'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
+import { useIsMobile } from 'shared/lib'
 
 const Logo: NextPage = () => {
+  const { isMobile } = useIsMobile()
+
   return (
     <>
       <Header title='Айдентика бренда' />
       <Section title='Логотип'>
-        <Paragraph style={{ width: 820, marginTop: 126 }}>
+        <Paragraph
+          style={{
+            width: isMobile ? undefined : 820,
+            marginTop: isMobile ? 40 : 126,
+          }}
+        >
           Это лицо нашего бренда, один из его ключевых идентифицирующих
           элементов. Внесение изменений в логотип не допускается.
         </Paragraph>
         <Variants style={{ marginTop: 36 }} />
-        <BlockTitle style={{ marginTop: 160 }} title='Размер и охранное поле' />
+        <BlockTitle
+          style={{ marginTop: isMobile ? 40 : 160 }}
+          title='Размер и охранное поле'
+        />
         <Paragraph>
           <Title>Охранное поле</Title>
           Логотип часто используется в сочетании с другими графическими
           элементами. Чтобы они не мешали восприятию логотипа, вокруг него
           сохраняется свободное пространство — так называемое охранное поле.
         </Paragraph>
-        <SafeArea style={{ marginTop: 25 }} />
-        <Paragraph style={{ marginTop: 100 }}>
+        {isMobile ? (
+          <SafeAreaM style={{ marginTop: 12 }} />
+        ) : (
+          <SafeArea style={{ marginTop: 25 }} />
+        )}
+        <Paragraph style={{ marginTop: isMobile ? 24 : 100 }}>
           <Title>Определение базового блока</Title>
           Величина охранного поля выражается в базовых блоках. Сторона базового
           блока X равна половине высоты логотипа СИБУР (см. иллюстрацию).
         </Paragraph>
-        <BaseBlock style={{ marginTop: 44 }} />
-        <Paragraph style={{ marginTop: 100 }}>
+        {isMobile ? (
+          <BaseBlockM style={{ marginTop: 12 }} />
+        ) : (
+          <BaseBlock style={{ marginTop: 44 }} />
+        )}
+        <Paragraph style={{ marginTop: isMobile ? 24 : 100 }}>
           <Title>Минимальный размер</Title>
           Чтобы обеспечить легкость прочтения логотипа независимо от области
           применения, предусмотрен его минимальный размер для печати и цифровых
           носителей.
         </Paragraph>
-        <Sizes style={{ marginTop: 44 }} />
-        <Paragraph style={{ marginTop: 100 }}>
+        {isMobile ? (
+          <SizesM style={{ marginTop: 12 }} />
+        ) : (
+          <Sizes style={{ marginTop: 44 }} />
+        )}
+        <Paragraph style={{ marginTop: isMobile ? 24 : 100 }}>
           Чтобы пропорционально изменять размеры логотипа, адаптируя его к
           макетам различного формата, высоту логотипа{' '}
           <strong>
@@ -57,7 +88,7 @@ const Logo: NextPage = () => {
           </strong>
           <br />
           <br />
-          <Title>ИСКЛЮЧЕНИЯ</Title>
+          <Title>Исключения</Title>
           При работе с носителями, у которых короткая сторона намного короче
           длинной, напр. с цифровыми баннерами, имеющими соотношение сторон
           более 21:9, можно задать высоту логотипа в размере 20% от длины
@@ -69,28 +100,38 @@ const Logo: NextPage = () => {
           стороны.
           <br />
           <br />
-          <Title>РЕКОМЕНДАЦИИ</Title>
+          <Title>Рекомендации</Title>
           При масштабировании логотипа важно учитывать содержательное наполнение
           проектируемой точки контакта. Масштабируя логотип, важно помнить, что
           он должен вписываться в базовый модуль макета.
         </Paragraph>
-        <Banner style={{ marginTop: 45, marginLeft: -50 }} />
+        <Banner style={{ marginTop: 45, marginLeft: `-3.5%` }} />
         <p className={styles.label}>
-          БАННЕР ФОРМАТА LEADERBOARD 728 Х 90 ПИКС.
+          Баннер формата Leaderboard 728 Х 90 пикс.
         </p>
-        <BlockTitle style={{ marginTop: 160 }} title='Варианты логотипа' />
+        <BlockTitle
+          style={{ marginTop: isMobile ? 24 : 160 }}
+          title='Варианты логотипа'
+        />
         <Paragraph>
           Существует лишь три цветовых варианта логотипа. Выбор того или иного
           варианта диктуется условиями видимости и логикой оформления. При
-          размещении логотипа поверх фотоизображений следует обеспечить
-          легкость его прочтения.
+          размещении логотипа поверх фотоизображений следует обеспечить легкость
+          его прочтения.
         </Paragraph>
-        <Backgrounds style={{ marginTop: 120 }} />
-        <BlockTitle style={{ marginTop: 160 }} title='Размещение на макете' />
+        {isMobile ? (
+          <BackgroundsM style={{ marginTop: 12 }} />
+        ) : (
+          <Backgrounds style={{ marginTop: 120 }} />
+        )}
+        <BlockTitle
+          style={{ marginTop: isMobile ? 64 : 160 }}
+          title='Размещение на макете'
+        />
         <Paragraph>
           Логотип должен вписываться в одиночный базовый модуль (3 х 3 ячейки)
           конкретного макета и не выходить за поля, ширина которых определяется
-          базовым блоком (x), равным 5%
+          базовым блоком (x), равным 5%{' '}
           <strong>от длины короткой стороны носителя.</strong>
           <br />
           <br />
@@ -111,15 +152,23 @@ const Logo: NextPage = () => {
           изображения с несложной композицией, которые{' '}
           <strong>не будут мешать его восприятию.</strong>
         </Paragraph>
-        <Logos style={{ marginLeft: -30, marginTop: 80 }} />
+        {isMobile ? (
+          <LogosM style={{ marginLeft: `-1.7%`, marginTop: 12 }} />
+        ) : (
+          <Logos style={{ marginLeft: `-1.7%`, marginTop: 80 }} />
+        )}
         <BlockTitle
-          style={{ marginTop: 160 }}
+          style={{ marginTop: isMobile ? 36 : 160 }}
           title='Неправильное использование'
         />
-        <WrongUsages style={{ marginLeft: -10 }} />
+        {isMobile ? (
+          <WrongUsagesM style={{ marginLeft: -8 }} />
+        ) : (
+          <WrongUsages style={{ marginLeft: -10 }} />
+        )}
       </Section>
       <Section title='Слоган'>
-        <Paragraph style={{ marginTop: 130 }}>
+        <Paragraph style={{ marginTop: isMobile ? 40 : 130 }}>
           Наш слоган <strong>«Партнеры для роста»</strong> всегда размещается
           отдельно от логотипа. Это визуально балансирует элементы макета,
           обеспечивает легкость прочтения и адаптируемость к различным форматам
@@ -153,8 +202,15 @@ const Logo: NextPage = () => {
           <strong>3X базовых блоков</strong> в горизонтальном расположении и
           <strong>2X</strong> в вертикальном.
         </Paragraph>
-        <Slogan style={{ marginTop: 60, marginLeft: -20 }} />
-        <BlockTitle style={{ marginTop: 160 }} title='Размещение' />
+        {isMobile ? (
+          <SloganM style={{ marginTop: 20, marginLeft: -4 }} />
+        ) : (
+          <Slogan style={{ marginTop: 60, marginLeft: -20 }} />
+        )}
+        <BlockTitle
+          style={{ marginTop: isMobile ? 20 : 160 }}
+          title='Размещение'
+        />
         <Paragraph>
           Логотип и слоган СИБУРа следует размещать в нижних или верхних углах
           макета, друг напротив друга.
@@ -174,7 +230,11 @@ const Logo: NextPage = () => {
           изображения с несложной композицией, которые не будут мешать его
           восприятию.
         </Paragraph>
-        <Placement style={{ marginLeft: -10, marginTop: 30 }} />
+        {isMobile ? (
+          <PlacementM style={{ marginLeft: -10, marginTop: 20 }} />
+        ) : (
+          <Placement style={{ marginLeft: -13, marginTop: 30 }} />
+        )}
       </Section>
       <PageToggle
         prevLink={Routes.About}
