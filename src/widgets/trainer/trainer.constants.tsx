@@ -269,9 +269,9 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Да!</b> Это верный русскоязычный вариант логотипа.
-          </>
+          </div>
         ),
       },
       {
@@ -281,10 +281,10 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно.</b> Контурный шрифт <br />
             не подходит для логотипа.
-          </>
+          </div>
         ),
       },
     ],
@@ -389,10 +389,10 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Нет,</b> присмотритесь, здесь <br />
             не все цвета совпадают.
-          </>
+          </div>
         ),
       },
       {
@@ -403,9 +403,9 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Абсолютно верно!</b>
-          </>
+          </div>
         ),
       },
     ],
@@ -421,11 +421,11 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             Вы заметили нанолист на другом плакате?
             <br /> <b>Верно,</b> раньше нанолист использовался, <br />
             как фирменный элемент, но сейчас <br />в брендбуке СИБУРа его нет.
-          </>
+          </div>
         ),
       },
       {
@@ -435,11 +435,11 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно,</b> на этом плакате есть нанолист. Раньше он
             использовался, как фирменный элемент, но сейчас в брендбуке СИБУРа
             его нет.
-          </>
+          </div>
         ),
       },
     ],
@@ -455,11 +455,11 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Верно!</b> «Паттерны партнерства» — это новый фирменный стиль
             СИБУРа. Сочетание фигур различных форм и очертаний символизирует
             разнообразие мнений, точек зрения и подходов к решению общей задачи.
-          </>
+          </div>
         ),
       },
       {
@@ -469,12 +469,12 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно.</b> Теперь у СИБУРа появились «Паттерны партнерства».
             Запомните, как выглядит сочетание фигур различных форм и очертаний,
             которое символизирует разнообразие мнений, точек зрения и подходов к
             решению общей задачи.
-          </>
+          </div>
         ),
       },
     ],
@@ -489,9 +489,9 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно,</b> в этом случае две фотографии перегружают плакат.
-          </>
+          </div>
         ),
       },
       {
@@ -502,10 +502,10 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Верно,</b> фотографии можно использовать, <br />
             но важно не перегружать ими плакат.
-          </>
+          </div>
         ),
       },
     ],
@@ -521,7 +521,7 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Верно,</b> «Паттерны партнерства» состоят из:
             <br />
             <br />
@@ -534,7 +534,7 @@ export const questions: Questions = [
             прогресса; <br />
             4. <b>Соединяющихся фигур</b> — это символ партнерства, диалога и
             обмена мнениями.
-          </>
+          </div>
         ),
       },
       {
@@ -544,7 +544,7 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно,</b> «Паттерны партнерства» состоят из:
             <br />
             <br />
@@ -554,7 +554,7 @@ export const questions: Questions = [
             3. <b>Остроугольных фигур</b> — это символ инноваций, роста и
             прогресса; 4. <b>Соединяющихся фигур</b> — это символ партнерства,
             диалога и обмена мнениями.
-          </>
+          </div>
         ),
       },
     ],
@@ -569,12 +569,12 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно!</b>
             <br />
             Логотип должен вписываться в базовый квадратный модуль и не выходить
             за его пределы.
-          </>
+          </div>
         ),
       },
       {
@@ -585,12 +585,12 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Верно!</b>
             <br />
             Логотип должен вписываться в базовый квадратный модуль и не выходить
             за его пределы.
-          </>
+          </div>
         ),
       },
     ],
@@ -605,10 +605,10 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Неверно.</b> Слоган всегда нужно располагать на расстоянии от
             логотипа.
-          </>
+          </div>
         ),
       },
       {
@@ -619,10 +619,10 @@ export const questions: Questions = [
           </div>
         ),
         description: (
-          <>
+          <div className={styles.imageDescription}>
             <b>Верно!</b> Слоган всегда нужно писать в одну строку и располагать
             на расстоянии от логотипа.
-          </>
+          </div>
         ),
       },
     ],
