@@ -5,7 +5,7 @@ import { CSSProperties, ReactNode } from 'react'
 
 interface Props {
   title: ReactNode
-  children: ReactNode
+  children?: ReactNode
   style?: CSSProperties
   noPadding?: boolean
 }

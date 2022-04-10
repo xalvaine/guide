@@ -13,3 +13,16 @@
   color: #000000;
   margin-bottom: 23px;
 }
+
+@media (max-width: 1023px) {
+  .supTitle {
+    margin-top: 45px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .subTitle {
+    font-size: 12px;
+    line-height: 30px;
+  }
+}

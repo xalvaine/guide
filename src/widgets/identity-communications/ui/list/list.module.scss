@@ -1,6 +1,5 @@
 /* autoprefixer grid: autoplace */
 .wrapper {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   margin-right: -55px;
 
 }
@@ -30,4 +29,30 @@
 .text {
   font-size: 24px;
   line-height: 30px;
+}
+
+
+@media (max-width: 1023px) {
+  .wrapper {
+    margin: 0 0 -12px;
+  }
+
+  .itemRow {
+    flex-direction: column;
+  }
+
+  .item {
+    margin: 0 0 12px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .number {
+    font-size: 34px;
+    line-height: 40px;
+    margin-right: 12px;
+  }
 }

@@ -1,21 +1,24 @@
 import styles from './list.module.scss'
-import { CSSProperties } from 'react'
+import {CSSProperties, ReactNode} from 'react'
+import { useIsMobile } from 'shared/lib'
 
 interface Props {
-  items: string[]
+  items: ReactNode[]
   style?: CSSProperties
   singleRow?: boolean
 }
 
 export const List = ({ items, style, singleRow }: Props) => {
-  const row1: string[] = []
-  const row2: string[] = []
+  const row1: ReactNode[] = []
+  const row2: ReactNode[] = []
 
-  for (let i = 0; i < items.length + (items.length % 2); i++) {
+  const { isMobile } = useIsMobile()
+
+  for (let i = 0; i < items.length + (items.length % 2) - +isMobile; i++) {
     if (i % 2 === 0) {
       row1.push(items[i])
     } else {
-      ;(singleRow ? row1 : row2).push(items[i] || ``)
+      ;(singleRow || isMobile ? row1 : row2).push(items[i] || ``)
     }
   }
 
@@ -25,7 +28,7 @@ export const List = ({ items, style, singleRow }: Props) => {
         {row1.map((item, index) => (
           <div key={index} className={styles.item}>
             <p className={styles.number}>
-              {((singleRow ? index : index * 2) + 1)
+              {((singleRow || isMobile ? index : index * 2) + 1)
                 .toString()
                 .padStart(2, `0`)}
             </p>

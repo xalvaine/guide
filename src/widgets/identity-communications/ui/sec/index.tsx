@@ -14,7 +14,7 @@ export const Sec = ({ title, items, supTitle, subTitle }: Props) => {
   return (
     <>
       <h4 className={styles.supTitle}>{supTitle}</h4>
-      <BlockTitle title={title} />
+      <BlockTitle borderless title={title} />
       <h5 className={styles.subTitle}>{subTitle}</h5>
       <List items={items} />
     </>
