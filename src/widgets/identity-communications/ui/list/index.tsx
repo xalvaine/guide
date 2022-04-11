@@ -1,5 +1,5 @@
 import styles from './list.module.scss'
-import {CSSProperties, ReactNode} from 'react'
+import { CSSProperties, ReactNode } from 'react'
 import { useIsMobile } from 'shared/lib'
 
 interface Props {
@@ -14,7 +14,7 @@ export const List = ({ items, style, singleRow }: Props) => {
 
   const { isMobile } = useIsMobile()
 
-  for (let i = 0; i < items.length + (items.length % 2) - +isMobile; i++) {
+  for (let i = 0; i < items.length + +(items.length % 2 || isMobile) - +isMobile; i++) {
     if (i % 2 === 0) {
       row1.push(items[i])
     } else {
