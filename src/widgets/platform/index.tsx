@@ -147,22 +147,6 @@ export const Platform = () => {
         </BigText>
         <div className={styles.i3} />
       </Section>
-      <Section noPadding title='Продукты'>
-        <BigText
-          style={{
-            marginTop: isMobile ? 0 : 95,
-            marginBottom: isMobile ? 0 : 55,
-          }}
-        >
-          Создаем инновационные продукты, которые позволяют обществу двигаться
-          вперед
-        </BigText>
-        <Container>
-          <Prods />
-          <p className={styles.text}>Среди задач центра «ПолиЛаб»:</p>
-        </Container>
-        <div className={styles.i4} />
-      </Section>
       <PageToggle
         prevLink={Routes.About}
         prevTitle='Новый бренд СИБУРа'
