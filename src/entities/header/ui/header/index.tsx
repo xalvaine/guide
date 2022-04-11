@@ -6,6 +6,7 @@ import Burger from './assets/burger.svg'
 import Search from './assets/search.svg'
 import Logo from './assets/logo.svg'
 import { Link } from '../link'
+import NextLink from 'next/link'
 
 import styles from './header.module.scss'
 import { Dropdown } from 'entities/header/ui/dropdown'
@@ -35,9 +36,11 @@ export const Header = ({ title }: Props) => {
               onClick={() => setVisible(!visible)}
             />
             <Search className={styles.search} />
-            <div className={styles.logoAndBurger}>
-              <Logo />
-            </div>
+            <NextLink href={Routes.About}>
+              <a className={styles.logoAndBurger}>
+                <Logo />
+              </a>
+            </NextLink>
             <div
               className={classNames(
                 styles.links,
