@@ -1,18 +1,16 @@
 .button {
-  background: #008c95;
-  border: 1px solid #ffffff;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 20px rgba(155, 155, 155, 0.4);
-  border-radius: 80.4524px;
   position: absolute;
   padding: 15px 50px;
   font-weight: 400;
   font-family: Roboto, sans-serif;
   font-size: 27px;
   line-height: 32px;
-  text-decoration: underline;
+  text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+  background: #008C95;
+  box-shadow: 0px 0px 9.98978px rgba(155, 155, 155, 0.4);
+  border-radius: 40.1851px;
 }
 
 @media (max-width: 1200px) {

@@ -109,7 +109,7 @@
 
   .logoAndBurger {
     width: auto;
-    margin: 0 auto;
+    margin: 0 auto 0 0;
   }
 
   .icon {
@@ -127,12 +127,16 @@
     line-height: 32px;
   }
 
+  .burger {
+    right: 0;
+  }
+
   .burgerActive {
     fill: white;
   }
 
   .search {
-    right: 0;
+    display: none;
   }
 
   .hiddenOnMobile {
