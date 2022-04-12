@@ -115,7 +115,7 @@ export const Library = () => {
         />
         <Block
           download
-          link='/Шаблон презентаций.pptx'
+          link='/Shablon prezentacij.pptx'
           style={{ marginTop: isMobile ? 40 : 120 }}
           title='Шаблон презентации'
           content={
@@ -130,7 +130,7 @@ export const Library = () => {
         />
         <Block
           download
-          link='/Конструктор презентаций.pdf'
+          link='/Konstruktor prezentacij.pdf'
           style={{ marginTop: isMobile ? 40 : 120 }}
           title='Конструктор презентации'
           content={
