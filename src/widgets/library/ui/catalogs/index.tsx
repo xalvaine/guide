@@ -52,7 +52,7 @@ export const Catalogs = () => {
 
   return (
     <>
-      <BlockTitle title='Отраслевые каталоги' />
+      <BlockTitle title='Отраслевые каталоги' style={{marginTop: isMobile ? 40 : 120}} />
       {content.map((cat) => (
         <Cat key={cat.link} {...cat} />
       ))}
