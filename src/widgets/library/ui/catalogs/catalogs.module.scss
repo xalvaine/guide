@@ -1,0 +1,43 @@
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+
+  /* SIBUR Main Color */
+
+  color: #008c95;
+}
+
+.image {
+  width: 70%;
+}
+
+.bwrapper {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.download {
+  right: 0;
+  bottom: 24px;
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .bwrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .download {
+    position: static;
+  }
+}

@@ -7,7 +7,7 @@ import { BlockTitle } from 'entities/block-title/ui'
 import { Video } from 'widgets/library/ui/video'
 import { Paragraph } from 'shared/ui/paragraph'
 import Booklet from './assets/booclet.svg'
-import Catalogs from './assets/catalogs.svg'
+import { Catalogs } from './ui/catalogs'
 import Pres from './assets/pres.svg'
 import Templ from './assets/templ.svg'
 import Const from './assets/const.svg'
@@ -83,21 +83,7 @@ export const Library = () => {
             />
           }
         />
-        <Block
-          download
-          style={{ marginTop: isMobile ? 40 : 120 }}
-          link='/Отраслевые каталоги.zip'
-          title='Отраслевые каталоги'
-          content={
-            <Catalogs
-              style={{
-                marginLeft: isMobile ? undefined : -15,
-                marginBottom: isMobile ? 15 : -25,
-                width: isMobile ? `100%` : `70%`,
-              }}
-            />
-          }
-        />
+        <Catalogs />
         <Block
           download
           link='/СЛАЙДЫ О КОМПАНИИ 2022.pptx'
