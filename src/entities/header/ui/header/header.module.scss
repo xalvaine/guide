@@ -115,8 +115,8 @@
   .icon {
     display: block;
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 42px;
+    height: 41px;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -129,10 +129,11 @@
 
   .burger {
     right: 0;
+    fill: #00313c;
   }
 
   .burgerActive {
-    fill: white;
+    fill: #77e2c3;
   }
 
   .search {
