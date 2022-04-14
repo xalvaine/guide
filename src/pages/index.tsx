@@ -7,7 +7,7 @@ export const HomePage = () => {
 
   useEffect(() => {
     replace(Routes.About).then()
-  }, [])
+  }, [replace])
 
   return <></>
 }
