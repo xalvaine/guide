@@ -34,6 +34,7 @@ export default function Document() {
           content='/favicon/browserconfig.xml'
         />
         <meta name='theme-color' content='#ffffff' />
+        <meta property="og:image" content="/preview.jpg" />
       </Head>
       <body>
         <Main />
