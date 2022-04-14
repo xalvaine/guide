@@ -36,24 +36,20 @@ export default function Document() {
         <meta name='theme-color' content='#ffffff' />
 
         <meta property='og:title' content='European Travel Destinations' />
-        <meta property='og:type' content='article' />
+        <meta property='og:type' content='image' />
         <meta
           property='og:image'
           content='https://guide.sibur.ru/preview.jpg'
         />
-        <meta
-          property='og:url'
-          content='https://guide.sibur.ru'
-        />
-        <meta name='twitter:card' content='https://guide.sibur.ru/preview.jpg' />
+        <meta property='og:url' content='https://guide.sibur.ru' />
+        <meta name='twitter:card' content='summary_large_image' />
 
-        <meta
-          property='og:description'
-          content='Новый бренд СИБУРа'
-        />
+        <meta property='og:description' content='Новый бренд СИБУРа' />
         <meta property='og:site_name' content='Новый бренд СИБУРа' />
         <meta name='twitter:image:alt' content='Новый бренд СИБУРа' />
-
+        <meta name='description' content='' />
+        <meta name='keywords' content='' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       </Head>
       <body>
         <Main />
