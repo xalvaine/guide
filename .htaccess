@@ -1,4 +1,4 @@
-DirectoryIndex about.html
 RewriteEngine On
+RewriteRule ^$ /about [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
