@@ -34,7 +34,26 @@ export default function Document() {
           content='/favicon/browserconfig.xml'
         />
         <meta name='theme-color' content='#ffffff' />
-        <meta property="og:image" content="/preview.jpg" />
+
+        <meta property='og:title' content='European Travel Destinations' />
+        <meta property='og:type' content='article' />
+        <meta
+          property='og:image'
+          content='https://guide.sibur.ru/preview.jpg'
+        />
+        <meta
+          property='og:url'
+          content='https://guide.sibur.ru'
+        />
+        <meta name='twitter:card' content='https://guide.sibur.ru/preview.jpg' />
+
+        <meta
+          property='og:description'
+          content='Новый бренд СИБУРа'
+        />
+        <meta property='og:site_name' content='Новый бренд СИБУРа' />
+        <meta name='twitter:image:alt' content='Новый бренд СИБУРа' />
+
       </Head>
       <body>
         <Main />
