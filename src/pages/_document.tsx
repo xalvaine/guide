@@ -35,7 +35,7 @@ export default function Document() {
         />
         <meta name='theme-color' content='#ffffff' />
 
-        <meta property='og:title' content='European Travel Destinations' />
+        <meta property='og:title' content='Новый бренд СИБУРа' />
         <meta property='og:type' content='image' />
         <meta
           property='og:image'
