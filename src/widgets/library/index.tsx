@@ -8,8 +8,9 @@ import { Video } from 'widgets/library/ui/video'
 import { Paragraph } from 'shared/ui/paragraph'
 import Booklet from './assets/booclet.svg'
 import { Catalogs } from './ui/catalogs'
-import Pres from './assets/pres.svg'
-import Templ from './assets/templ.svg'
+import pres from './assets/pres.jpg'
+import templ1 from './assets/templ1.jpg'
+import templ2 from './assets/templ2.jpg'
 import Const from './assets/const.svg'
 import chan from './assets/chan.png'
 import { Socials } from 'widgets/library/ui/socials'
@@ -90,10 +91,11 @@ export const Library = () => {
           style={{ marginTop: isMobile ? 40 : 120 }}
           title='Презентация о компании'
           content={
-            <Pres
+            <img
+              src={pres.src}
               style={{
-                marginLeft: isMobile ? undefined : -15,
-                marginBottom: isMobile ? 15 : -25,
+                marginLeft: isMobile ? undefined : -45,
+                marginBottom: isMobile ? 15 : -45,
                 width: isMobile ? `100%` : `70%`,
               }}
             />
@@ -101,14 +103,43 @@ export const Library = () => {
         />
         <Block
           download
-          link='/Shablon prezentacij.pptx'
+          link='/16х9_RU 2022 NEW (12042022).potx'
           style={{ marginTop: isMobile ? 40 : 120 }}
-          title='Шаблон презентации'
+          title={
+            <>
+              Шаблон презентации
+              <br />
+              на русском языке
+            </>
+          }
           content={
-            <Templ
+            <img
+              src={templ1.src}
               style={{
                 marginLeft: isMobile ? undefined : -15,
-                marginBottom: isMobile ? 15 : -25,
+                marginBottom: isMobile ? 15 : -45,
+                width: isMobile ? `100%` : `70%`,
+              }}
+            />
+          }
+        />
+        <Block
+          download
+          link='/16х9_EN 2022 NEW (12042022).potx'
+          style={{ marginTop: isMobile ? 40 : 120 }}
+          title={
+            <>
+              Шаблон презентации
+              <br />
+              на английком языке
+            </>
+          }
+          content={
+            <img
+              src={templ1.src}
+              style={{
+                marginLeft: isMobile ? undefined : -15,
+                marginBottom: isMobile ? 15 : -45,
                 width: isMobile ? `100%` : `70%`,
               }}
             />
