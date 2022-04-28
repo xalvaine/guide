@@ -324,7 +324,13 @@ export const questions: Questions = [
     ],
   },
   {
-    question: `С обновленным брендингом в палитре СИБУРа появились 4 основных цвета. Что это за цвета?`,
+    question: (
+      <>
+        С обновленным брендингом в палитре СИБУРа
+        <br />
+        появились 4 основных цвета. Что это за цвета?
+      </>
+    ),
     variants: [
       {
         isCorrect: true,
@@ -547,7 +553,7 @@ export const questions: Questions = [
       {
         content: (
           <div className={styles.imageContent3}>
-            <I17_2 style={{marginRight: -12}} />
+            <I17_2 style={{ marginRight: -12 }} />
           </div>
         ),
         description: (
