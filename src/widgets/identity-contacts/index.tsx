@@ -27,7 +27,7 @@ const Contact = ({ email, name }: Props) => (
 
 const contacts: Props[] = [
   { email: `rusanovaayu@sibur.ru`, name: `Русанова Анна` },
-  { email: `ogorodnikovaia@bsc.sibur.ru`, name: `Огородникова Инга` },
+  { email: `ogorodnikovaia@rt.sibur.ru`, name: `Огородникова Инга` },
 ]
 
 export const IdentityContacts: NextPage = () => {

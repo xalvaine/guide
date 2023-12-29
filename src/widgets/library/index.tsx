@@ -4,13 +4,12 @@ import { Block } from 'widgets/library/ui/block'
 import phbank from './assets/Снимок экрана 2022-03-29 в 22.39 1.png'
 import { Container } from 'shared/ui/container'
 import { BlockTitle } from 'entities/block-title/ui'
-import { Video } from 'widgets/library/ui/video'
+import { Videos } from 'widgets/library/ui/video'
 import { Paragraph } from 'shared/ui/paragraph'
 import Booklet from './assets/booclet.svg'
 import { Catalogs } from './ui/catalogs'
 import pres from './assets/pres.jpg'
 import templ1 from './assets/templ1.jpg'
-import templ2 from './assets/templ2.jpg'
 import Const from './assets/const.svg'
 import chan from './assets/chan.png'
 import { Socials } from 'widgets/library/ui/socials'
@@ -47,8 +46,8 @@ export const Library = () => {
         />
       </Container>
       <Container style={{ marginTop: isMobile ? 25 : 160 }}>
-        <BlockTitle title='Видеоролик о СИБУРе' />
-        <Video />
+        <BlockTitle title='Видеоролики о СИБУРе' />
+        <Videos />
       </Container>
       <Section
         style={{ marginTop: isMobile ? 40 : 160 }}

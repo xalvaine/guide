@@ -8,11 +8,14 @@
   }
 }
 
+.videosWrapper {
+  position: relative;
+}
+
 .video {
   top: 0;
   position: absolute;
   background: #00323d;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.25);
   border-radius: 45px;
   width: 100%;
   height: 100%;
@@ -41,6 +44,10 @@
   opacity: 0;
 }
 
+.carousel {
+  border-radius: 45px;
+}
+
 @media (max-width: 1200px) {
   .video {
     border-radius: 10px;
@@ -53,5 +60,16 @@
 
   .buttonHidden {
     opacity: 0;
+  }
+
+  .carousel {
+    border-radius: 10px;
+  }
+
+  .download {
+    position: static;
+    margin: 26px auto -8px;
+    display: block;
+    width: fit-content;
   }
 }

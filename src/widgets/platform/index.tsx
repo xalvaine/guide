@@ -7,8 +7,6 @@ import mission from './assets/mission.png'
 import values from './assets/values.png'
 import values2 from './assets/values2.png'
 import positioning from './assets/positioning.png'
-import { Container } from 'shared/ui/container'
-import Prods from './assets/prods.svg'
 import { PageToggle } from 'shared/ui/page-toggle'
 import { Routes } from 'shared/config'
 import { useEffect, useState } from 'react'
@@ -56,14 +54,7 @@ export const Platform = () => {
               компания России <br />и одна из наиболее динамично развивающихся
               компаний глобальной нефтегазохимии.
             </Paragraph>
-            <img
-              src={whoweare_1_m.src}
-              style={{
-                marginTop: 12,
-                width: `100%`,
-              }}
-            />
-            <Whoweare_2_m style={{ marginTop: 28, marginLeft: -2 }} />
+            <div className={styles.i1} />
           </>
         ) : (
           <div className={styles.i1} />
