@@ -13,8 +13,6 @@ import { useEffect, useState } from 'react'
 import { useIsMobile } from 'shared/lib'
 import { BlockTitle } from 'entities/block-title/ui'
 import { Paragraph } from 'shared/ui/paragraph'
-import whoweare_1_m from './assets/whoweare_1_m.jpg'
-import Whoweare_2_m from './assets/whoweare_2_m.svg'
 import values_m from './assets/values_m.jpg'
 
 export const Platform = () => {

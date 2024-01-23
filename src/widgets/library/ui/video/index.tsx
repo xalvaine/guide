@@ -47,18 +47,22 @@ export const Video = ({ src }: { src: string }) => {
 const videos: { src: string; name: string }[] = [
   {
     src: `The Future is in Your Hands_RUS_25fps_h264_v1_subtitles120_1920x1080.mp4`,
-    name: `The Future is in Your Hands`,
+    name: `The Future is in Your Hands_rus_sub`,
   },
-  { src: `SIBUR DONE with Logo 3456х1536.mp4`, name: `Done` },
-  { src: `SIBUR_PV_rus_sub_полная версия.mp4`, name: `PV` },
+  {
+    src: `SIBUR Products_RUS_полная версия_с субтитрами.mp4`,
+    name: `Новый отраслевой ролик о СИБУРе_rus_sub`,
+  },
+  { src: `SIBUR DONE with Logo 3456х1536.mp4`, name: `Продуктовый ролик` },
+  {
+    src: `SIBUR_PV_rus_sub_полная версия.mp4`,
+    name: `Новый имиджевый ролик о СИБУРе_rus_sub`,
+  },
   {
     src: `Vivilen_ролик о продукте и производстве_полная версия_RUS_без субтитров.mp4`,
-    name: `Продукт и производство`,
+    name: `Vivilen_ролик о продукте и производстве_полная версия_RUS_без субтитров`,
   },
-  { src: `МАСТЕР ДОМ ПОЛИМЕРОВ_v2.mp4`, name: `Дом полимеров` },
-  { src: `СИБУР КАУЧУК (динамика).mov`, name: `Каучук (динамика)` },
-  { src: `СИБУР КАУЧУК (новая классика).mov`, name: `Каучук (новая классика)` },
-  { src: `СИБУР ПЛЁНКА.mov`, name: `Плёнка` },
+  { src: `МАСТЕР ДОМ ПОЛИМЕРОВ_v2.mp4`, name: `МАСТЕР ДОМ ПОЛИМЕРОВ_v2` },
 ]
 
 export const Videos = () => {
@@ -101,6 +105,7 @@ export const Videos = () => {
         style={{ right: 0, bottom: 0 }}
         link={getUrl(videos[page].src)}
       />
+      <div className={styles.toggle}>
       <PageToggle
         customLabel='Видеоролик'
         onPrevClick={handlePrev}
@@ -108,6 +113,7 @@ export const Videos = () => {
         prevTitle={videos[(page + videos.length - 1) % videos.length].name}
         nextTitle={videos[(page + videos.length + 1) % videos.length].name}
       />
+      </div>
     </div>
   )
 }

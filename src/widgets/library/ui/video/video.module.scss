@@ -48,6 +48,10 @@
   border-radius: 45px;
 }
 
+.toggle {
+  padding: 0 205px;
+}
+
 @media (max-width: 1200px) {
   .video {
     border-radius: 10px;
@@ -71,5 +75,9 @@
     margin: 26px auto -8px;
     display: block;
     width: fit-content;
+  }
+
+  .toggle {
+    padding: 0;
   }
 }
