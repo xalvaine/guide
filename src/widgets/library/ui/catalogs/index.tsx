@@ -3,6 +3,8 @@ import U from './assets/u.svg'
 import S from './assets/s.svg'
 import M from './assets/m.svg'
 import T from './assets/t.svg'
+import N from './assets/n.svg'
+import C from './assets/c.svg'
 import { BlockTitle } from 'entities/block-title/ui'
 import { ReactNode } from 'react'
 import { Download } from 'shared/ui/download'
@@ -11,23 +13,33 @@ import styles from './catalogs.module.scss'
 const content = [
   {
     title: `Упаковка`,
-    link: `/catalogs/Упаковка_2022.pdf`,
+    link: `/catalogs/Упаковка_2024_RU_web.pdf`,
     source: <U className={styles.image} />,
   },
   {
     title: `Строительство`,
-    link: `/catalogs/Строительство_2022.pdf`,
+    link: `/catalogs/Строительство_2024_RU_web.pdf`,
     source: <S className={styles.image} />,
   },
   {
     title: `Медицина`,
-    link: `/catalogs/Медицина_2022.pdf`,
+    link: `/catalogs/Медицина_2024_RU_web.pdf`,
     source: <M className={styles.image} />,
   },
   {
     title: `Транспорт`,
-    link: `/catalogs/Транспорт 2022.pdf`,
+    link: `/catalogs/Транспорт_2024_RU_web.pdf`,
     source: <T className={styles.image} />,
+  },
+  {
+    title: `Товары народного потребления`,
+    link: `/catalogs/Товары народного потребления_2024_RU_web.pdf`,
+    source: <N className={styles.image} />,
+  },
+  {
+    title: `Сельское хозяйство`,
+    link: `/catalogs/Сельское хозяйство_2024_RU_web.pdf`,
+    source: <C className={styles.image} />,
   },
 ]
 

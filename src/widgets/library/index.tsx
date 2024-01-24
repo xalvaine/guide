@@ -72,7 +72,7 @@ export const Library = () => {
           style={{ marginTop: isMobile ? 18 : 120 }}
           title='Буклет о компании'
           download
-          link='/Буклет о СИБУРе.pdf'
+          link='/Буклет о СИБУРе_2024.pdf'
           content={
             <Booklet
               style={{
