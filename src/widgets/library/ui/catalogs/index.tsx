@@ -5,6 +5,7 @@ import M from './assets/m.svg'
 import T from './assets/t.svg'
 import N from './assets/n.svg'
 import C from './assets/c.svg'
+import V from './assets/v.svg'
 import { BlockTitle } from 'entities/block-title/ui'
 import { ReactNode } from 'react'
 import { Download } from 'shared/ui/download'
@@ -40,6 +41,11 @@ const content = [
     title: `Сельское хозяйство`,
     link: `/catalogs/Сельское хозяйство_2024_RU_web.pdf`,
     source: <C className={styles.image} />,
+  },
+  {
+    title: `Vivilen`,
+    link: `/catalogs/Буклет Vivilen 2024_210х210_RU_web.pdf`,
+    source: <V className={styles.image} />,
   },
 ]
 

@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import 'swiper/css'
 import SwiperClass from 'swiper/types/swiper-class'
 import { SwiperSlide, Swiper } from 'swiper/react'
-import { PageToggle } from 'shared/ui/page-toggle'
+import { Toggle } from './ui/toggle'
 import { Download } from 'shared/ui/download'
 
 const getUrl = (url: string) => `/static/${url}`
@@ -99,20 +99,18 @@ export const Videos = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Download
-        target='_blank'
-        className={styles.download}
-        style={{ right: 0, bottom: 0 }}
-        link={getUrl(videos[page].src)}
-      />
       <div className={styles.toggle}>
-      <PageToggle
-        customLabel='Видеоролик'
-        onPrevClick={handlePrev}
-        onNextClick={handleNext}
-        prevTitle={videos[(page + videos.length - 1) % videos.length].name}
-        nextTitle={videos[(page + videos.length + 1) % videos.length].name}
-      />
+        <Toggle
+          onPrevClick={page > 0 ? handlePrev : undefined}
+          onNextClick={page < videos.length - 1 ? handleNext : undefined}
+          title={videos[page].name}
+        />
+        <Download
+          target='_blank'
+          className={styles.download}
+          style={{ right: 0, bottom: 0 }}
+          link={getUrl(videos[page].src)}
+        />
       </div>
     </div>
   )
