@@ -7,6 +7,7 @@ import { BlockTitle } from 'entities/block-title/ui'
 import { Videos } from 'widgets/library/ui/video'
 import { Paragraph } from 'shared/ui/paragraph'
 import Booklet from './assets/booclet.svg'
+import Vivilen from './assets/vivilen.svg'
 import { Catalogs } from './ui/catalogs'
 import pres from './assets/pres.jpg'
 import templ1 from './assets/templ1.jpg'
@@ -75,6 +76,21 @@ export const Library = () => {
           link='/Буклет о СИБУРе_2024.pdf'
           content={
             <Booklet
+              style={{
+                marginLeft: isMobile ? undefined : -15,
+                marginBottom: isMobile ? 15 : -25,
+                width: isMobile ? `100%` : `70%`,
+              }}
+            />
+          }
+        />
+        <Block
+          style={{ marginTop: isMobile ? 18 : 120 }}
+          title='Буклет Vivilen'
+          download
+          link='/catalogs/Буклет Vivilen 2024_210х210_RU_web.pdf'
+          content={
+            <Vivilen
               style={{
                 marginLeft: isMobile ? undefined : -15,
                 marginBottom: isMobile ? 15 : -25,
